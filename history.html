@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel:wght@400;500;600;700;800;900&family=DM+Serif+Text:ital@0;1&family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Judson:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/png">
+    <title>History | Bacolor City Tourism</title>
+    <style>
+
+    </style>
+</head>
+<body class="w-screen overflow-x-hidden bg-cover bg-fixed bg-no-repeat" style="background-image: url(images/background.png);">
+
+<!--Nav-->
+<div class="fixed inset-y-0 right-0 sm:w-[20vw] md:w-[12vw] lg:w-[10vw] h-[40vh] flex flex-col items-center justify-between z-50">
+  <!-- Logo -->
+  <div class="py-2">
+      <button title="Show Menu" id="scrollToTop" class="hover:scale-110 transform transition-transform duration-300 ease-in-out" onclick="toggleNavIcons()">
+          <img src="images/BacoLogo.png" alt="Logo" class="w-[20vw] sm:w-[17vw] md:w-[9vw] lg:w-[7vw] h-auto">
+      </button>
+  </div>
+  
+  <!-- Navigation Icons -->
+  <div class="flex flex-col p-2 rounded-2xl bg-opacity-40 bg-[#1b2021] w-[20vw] sm:w-[17vw] md:w-[9vw] lg:w-[7vw] justify-center items-center space-y-4 mt-2 h-full hidden">
+      <a href="index.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+          <i title="Home" class="fas fa-home text-xl"></i>
+      </a>
+      <a href="municipality.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+          <i title="Municipality" class="fas fa-landmark text-xl"></i>
+      </a>
+      <a href="history.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+          <i title="History" class="fas fa-hourglass-end text-xl"></i>
+      </a>
+      <a href="map.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+          <i title="Landmarks" class="fas fa-map-marker-alt text-xl"></i>
+      </a>
+      <a href="fnf.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+          <i title="Foods and Festivities" class="fas fa-utensils text-xl"></i>
+      </a>
+  </div>
+</div>
+
+<script>
+  // JavaScript function to toggle the navigation icons
+  function toggleNavIcons() {
+      var navIcons = document.querySelector('.flex.flex-col.justify-center.items-center.space-y-4');
+      navIcons.classList.toggle('hidden');
+  }
+</script>
+<!--Nav-->
+
+<div class="w-screen h-[80vh] sm:h-[50vh] bg-gradient-to-tr from-[#5f1700] via-[#1b2021] to-[#5f1700] p-2 flex flex-col sm:flex-row border-[#232c33] border-y-4">
+  <div class="sm:w-1/2 w-full h-full flex flex-col items-center lg:items-start justify-center">
+      <div class="lg:ml-[5vw] w-[35vh] sm:w-[25vw] md:w-[40vw] lg:w-[30vw] xl:w-[20vw] h-[35vh] sm:h-[25vw] md:h-[40vw] lg:h-[30vw] xl:h-[20vw] bg-prp" style="background-image: url(images/history/hist.png);"></div>
+  </div>
+  <div class="sm:w-1/2 w-full h-full text-[#f7f9f9] flex flex-col items-center lg:items-start justify-center">
+      <h1 class="ml-2 font-bold text-3xl md:text-5xl lg:text-7xl xl:text-9xl" style="font-family: 'Judson', serif;">HISTORY</h1>
+      <p class="ml-4 md:w-1/2 w-full overflow-y-auto">
+        Bacolor, Philippines, holds a rich history dating back to Spanish colonial times, highlighted by the partially buried San Guillermo Parish Church due to Mount Pinatubo's eruption. Despite natural calamities, the city showcases resilience through its well-preserved landmarks, creating a unique blend of historical significance and modern vibrancy.</p>
+  </div>
+</div>
+<!--Content-->
+
+<div class="container mx-auto px-4 py-12">
+  <div class="relative wrap overflow-hidden h-full">
+      
+      <!-- Timeline items -->
+      <div  class="mb-8 flex justify-between items-center w-full right-timeline">
+          <div class="order-1 w-5/12"></div>
+            <div class="hidden sm:block p-4 overflow-y-auto text-white flex items-center order-1 bg-[#fd814b] bg-opacity-30 rounded-xl w-[30vw] h-[30vh] md:w-[45vw] md:h-[40vh] absolute">
+                <p>Bacolor, Pampanga, offers a glimpse into the rich and diverse pre-colonial history of the Philippines, with its undocumented past reconstructed through archaeology, linguistics, and oral traditions. This region was once inhabited by Austronesian-speaking communities engaged in agriculture, fishing, and trade, showcasing a vibrant tapestry of cultures, beliefs, and technological exchanges that shaped its unique heritage.</p>
+            </div>
+          <div id="openModalButton" class="flex flex-col cursor-pointer order-1 rounded-lg w-[55vw] h-[55vw] md:w-[36vw] md:h-[36vw] px-6 py-4 
+          bg-cover bg-center bg-no-repeat" style="background-image: url(images/history/history-bg1.png);">
+            <div class="relative w-full h-full hover:scale-105 hover:transition-transform ease-in-out duration-300 bg-prp"
+            style="background-image: url(images/history/history1.png);">
+                <div class="w-full h-[25%] hover:scale-105 hover:transition-transform ease-in-out duration-300 bottom-0 absolute flex flex-col items-center justify-center text-white">
+                    <h1 class="font-bold text-xl md:text-3xl lg:text-5xl xl:text-7xl" style="font-family: 'Judson', serif;">Pre-Colonial</h1>
+                </div>
+            </div>
+            
+          </div>
+      </div>
+      
+      <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+          <div class="order-1 w-5/12"></div>
+            <div class="hidden sm:block p-4 overflow-y-auto text-white flex items-center order-1 bg-[#fd814b] bg-opacity-30 rounded-xl w-[30vw] h-[30vh] md:w-[45vw] md:h-[40vh] absolute">
+                <p>Bacolor, a town with a history dating back to the Spanish colonial era, played a vital role in the Philippines during this period. Established in 1571, it featured impressive baroque architecture, served as the capital of Pampanga, and experienced both the influence of Catholicism and the impact of natural disasters, particularly the eruption of Mount Pinatubo in 1991, which buried much of the town. The town's history also included agricultural and economic activities, resistance against Spanish rule, and a transition to American colonial administration following the Spanish-American War in 1898, leaving a lasting legacy in its culture and heritage.</p>
+            </div>
+          <div id="openModalButton2" class="flex flex-col cursor-pointer order-1 rounded-lg w-[48vw] h-[48vw] md:w-[36vw] md:h-[36vw] px-6 py-4 
+          bg-cover bg-center bg-no-repeat" style="background-image: url(images/history/history-bg2.png);">
+            <div class="relative w-full h-full hover:scale-105 hover:transition-transform ease-in-out duration-300 bg-prp"
+            style="background-image: url(images/history/history2.png);">
+                <div class="w-full h-[25%] hover:scale-105 hover:transition-transform ease-in-out duration-300 bottom-0 absolute flex flex-col items-center justify-center text-white">
+                    <h1 class="font-bold text-xl md:text-3xl lg:text-5xl xl:text-7xl" style="font-family: 'Judson', serif;">Spanish Era</h1>
+                </div>
+            </div>
+          </div>
+      </div>
+      
+      <div class="mb-8 flex justify-between items-center w-full right-timeline">
+          <div class="order-1 w-5/12"></div>
+            <div class="hidden sm:block p-4 overflow-y-auto text-white flex items-center order-1 bg-[#fd814b] bg-opacity-30 rounded-xl w-[30vw] h-[30vh] md:w-[45vw] md:h-[40vh] absolute">
+                <p>In the early 20th century, American colonial rule left a lasting imprint on Bacolor, a town in the Philippine province of Pampanga, particularly during the period known as the "Bacolor Republic." After the United States acquired the Philippines following the Spanish-American War, Filipino forces, led by Emilio Aguinaldo, resisted American occupation. Bacolor served as Aguinaldo's headquarters during the Philippine-American War, but its history took a unique turn as the town was buried by lahar floods from Mount Pinatubo's eruption in 1902. Despite these challenges, Bacolor became the center of the short-lived "Republic of the Philippines," led by Macario Sakay, in an attempt to restore self-governance. However, this Bacolor-based government was eventually suppressed by American forces in 1906.</p>
+            </div>
+          <div id="openModalButton3" class="flex flex-col cursor-pointer order-1 rounded-lg w-[48vw] h-[48vw] md:w-[36vw] md:h-[36vw] px-6 py-4 
+          bg-cover bg-center bg-no-repeat" style="background-image: url(images/history/history-bg1.png);">
+            <div class="relative w-full h-full hover:scale-105 hover:transition-transform ease-in-out duration-300 bg-prp"
+            style="background-image: url(images/history/history3.png);">
+                <div class="w-full h-[25%] hover:scale-105 hover:transition-transform ease-in-out duration-300 bottom-0 absolute flex flex-col items-center justify-center text-white">
+                    <h1 class="font-bold text-xl md:text-3xl lg:text-5xl xl:text-7xl" style="font-family: 'Judson', serif;">American Period</h1>
+                </div>
+            </div>
+          </div>
+      </div>
+      
+      <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+          <div class="order-1 w-5/12"></div>
+            <div class="hidden sm:block p-4 overflow-y-auto text-white flex items-center order-1 bg-[#fd814b] bg-opacity-30 rounded-xl w-[30vw] h-[30vh] md:w-[45vw] md:h-[40vh] absolute">
+                <p>After World War II, Bacolor, like many other parts of the Philippines, faced the formidable task of reconstruction and recovery. The eruption of Mount Pinatubo and the subsequent lahar flows added unique challenges to the town's post-war history, leading to the relocation of the town center and the preservation of its cultural heritage. Despite these difficulties, Bacolor's residents displayed resilience and worked towards economic revival and modernization, contributing to the town's ongoing development and growth. For the most current and detailed information on Bacolor's post-World War II history, consulting local historical records and official sources is recommended.</p>
+            </div>
+          <div id="openModalButton4"  class="flex flex-col cursor-pointer order-1 rounded-lg w-[48vw] h-[48vw] md:w-[36vw] md:h-[36vw] px-6 py-4 
+          bg-cover bg-center bg-no-repeat" style="background-image: url(images/history/history-bg2.png);">
+            <div class="relative w-full h-full hover:scale-105 hover:transition-transform ease-in-out duration-300 bg-prp"
+            style="background-image: url(images/history/history4.png);">
+                <div class="w-full h-[25%] hover:scale-105 hover:transition-transform ease-in-out duration-300 bottom-0 absolute flex flex-col items-center justify-center text-white">
+                    <h1 class="font-bold text-xl md:text-3xl lg:text-5xl xl:text-7xl" style="font-family: 'Judson', serif;">Post WWII</h1>
+                </div>
+            </div>
+          </div>
+      </div>
+
+      <div  class="mb-8 flex justify-between items-center w-full right-timeline">
+          <div class="order-1 w-5/12"></div>
+            <div class="hidden sm:block p-4 overflow-y-auto text-white flex items-center order-1 bg-[#fd814b] bg-opacity-30 rounded-xl w-[30vw] h-[30vh] md:w-[45vw] md:h-[40vh] absolute">
+                <p>As of my last knowledge update in September 2021, the information provided accurately reflects the historical context and post-eruption challenges faced by Bacolor, Pampanga. For the latest developments and changes in the town's history and modern era, I would recommend consulting local government sources, news outlets, or official websites for the most up-to-date information. These sources can provide current details on Bacolor's ongoing urbanization, infrastructure improvements, economic growth, and other relevant developments beyond 2021.</p>
+            </div>
+          <div id="openModalButton5" class="flex flex-col cursor-pointer order-1 rounded-lg w-[48vw] h-[48vw] md:w-[36vw] md:h-[36vw] px-6 py-4 
+          bg-cover bg-center bg-no-repeat" style="background-image: url(images/history/history-bg1.png);">
+            <div class="relative w-full h-full hover:scale-105 hover:transition-transform ease-in-out duration-300 bg-prp"
+            style="background-image: url(images/history/history5.png);">
+                <div class="w-full h-[25%] hover:scale-105 hover:transition-transform ease-in-out duration-300 bottom-0 absolute flex flex-col items-center justify-center text-white">
+                    <h1 class="font-bold text-xl md:text-3xl lg:text-5xl xl:text-7xl" style="font-family: 'Judson', serif;">Modern Day</h1>
+                </div>
+            </div>
+          </div>
+      </div>
+
+  </div>
+</div>
+<!--Content-->
+
+<!--Modals-->
+<div id="myModal" class="hidden fixed z-50 inset-0 flex items-center justify-center overflow-auto">
+  <div class="modal-content w-[85vw] h-[85vh] border-gray-700 border-2 flex flex-col items-center bg-prp p-4 rounded shadow-lg text-center relative" style="background-image: url(images/history/news.png);">
+      <!-- Close Button -->
+      <div class="h-[5%] w-[100%] z-10 p-2 flex flex-col items-center justify-center border-b-4 border-black">
+        <button id="closeModalButton" class="absolute right-0 mr-2 p-2 flex flex-col items-end justify-center
+        text-gray-800 hover:text-gray-900 focus:outline-none focus:text-gray-900">
+            <span class="sr-only">Close</span>
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <h1 class="text-2xl mb-2 font-bold" style="font-family: 'DM Serif Text', serif;">Pre Colonial</h1>
+      </div>
+
+      <iframe src="hist-PC.html" class="w-[90%] h-[90%] z-10 absolute bottom-0 mb-2"></iframe>
+
+      <div class="w-screen h-screen fixed top-0 bg-black bg-opacity-50 -z-50"></div>
+  </div>
+</div>
+
+<div id="myModal2" class="hidden fixed z-50 inset-0 flex items-center justify-center overflow-auto">
+  <div class="modal-content w-[85vw] h-[85vh] border-gray-700 border-2 flex flex-col items-center bg-prp p-4 rounded shadow-lg text-center relative" style="background-image: url(images/history/news.png);">
+      <!-- Close Button -->
+      <div class="h-[5%] w-[100%] z-10 p-2 flex flex-col items-center justify-center border-b-4 border-black">
+      <button id="closeModalButton2" class="absolute right-0 mr-2 p-2 flex flex-col items-end justify-center
+      text-gray-800 hover:text-gray-900 focus:outline-none focus:text-gray-900">
+          <span class="sr-only">Close</span>
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+       </button>
+        <h1 class="text-2xl mb-2 font-bold" style="font-family: 'DM Serif Text', serif;">Spanish Period</h1>
+      </div>
+      <iframe src="hist-SP.html" class="w-[90%] h-[90%] z-10 absolute bottom-0 mb-2"></iframe>
+
+      <div class="w-screen h-screen fixed top-0 bg-black bg-opacity-50 -z-50"></div>
+  </div>
+</div>
+
+<div id="myModal3" class="hidden fixed z-50 inset-0 flex items-center justify-center overflow-auto">
+  <div class="modal-content w-[85vw] h-[85vh] border-gray-700 border-2 flex flex-col items-center bg-prp p-4 rounded shadow-lg text-center relative" style="background-image: url(images/history/news.png);">
+      <!-- Close Button -->
+      <div class="h-[5%] w-[100%] z-10 p-2 flex flex-col items-center justify-center border-b-4 border-black">
+      <button id="closeModalButton3" class="absolute right-0 mr-2 p-2 flex flex-col items-end justify-center
+      text-gray-800 hover:text-gray-900 focus:outline-none focus:text-gray-900">
+          <span class="sr-only">Close</span>
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+      </button>
+      <h1 class="text-2xl mb-2 font-bold" style="font-family: 'DM Serif Text', serif;">American Period</h1>
+      </div>
+
+      <iframe src="hist-AM.html" class="w-[90%] h-[90%] z-10 absolute bottom-0 mb-2"></iframe>
+
+      <div class="w-screen h-screen fixed top-0 bg-black bg-opacity-50 -z-50"></div>
+  </div>
+</div>
+
+<div id="myModal4" class="hidden fixed z-50 inset-0 flex items-center justify-center overflow-auto">
+  <div class="modal-content w-[85vw] h-[85vh] border-gray-700 border-2 flex flex-col items-center bg-prp p-4 rounded shadow-lg text-center relative" style="background-image: url(images/history/news.png);">
+      <!-- Close Button -->
+      <div class="h-[5%] w-[100%] z-10 p-2 flex flex-col items-center justify-center border-b-4 border-black">
+      <button id="closeModalButton4" class="absolute right-0 mr-2 p-2 flex flex-col items-end justify-center
+      text-gray-800 hover:text-gray-900 focus:outline-none focus:text-gray-900">
+          <span class="sr-only">Close</span>
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+      </button>
+      <h1 class="text-2xl mb-2 font-bold" style="font-family: 'DM Serif Text', serif;">Post World War II</h1>
+      </div>
+      <iframe src="hist-WW.html" class="w-[90%] h-[90%] z-10 absolute bottom-0 mb-2"></iframe>
+
+      <div class="w-screen h-screen fixed top-0 bg-black bg-opacity-50 -z-50"></div>
+  </div>
+</div>
+
+<div id="myModal5" class="hidden fixed z-50 inset-0 flex items-center justify-center overflow-auto">
+  <div class="modal-content w-[85vw] h-[85vh] border-gray-700 border-2 flex flex-col items-center bg-prp p-4 rounded shadow-lg text-center relative" style="background-image: url(images/history/news.png);">
+      <!-- Close Button -->
+      <div class="h-[5%] w-[100%] z-10 p-2 flex flex-col items-center justify-center border-b-4 border-black">      
+      <button id="closeModalButton5" class="absolute right-0 mr-2 p-2 flex flex-col items-end justify-center
+      text-gray-800 hover:text-gray-900 focus:outline-none focus:text-gray-900">
+          <span class="sr-only">Close</span>
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+      </button>
+      <h1 class="text-2xl mb-2 font-bold" style="font-family: 'DM Serif Text', serif;">Modern Day</h1>
+      </div>
+      <iframe src="hist-MD.html" class="w-[90%] h-[90%] z-10 absolute bottom-0 mb-2"></iframe>
+
+      <div class="w-screen h-screen fixed top-0 bg-black bg-opacity-50 -z-50"></div>
+  </div>
+</div>
+
+
+<script>
+  const openModalButton = document.getElementById("openModalButton");
+  const closeModalButton = document.getElementById("closeModalButton");
+  const modal = document.getElementById("myModal");
+
+  openModalButton.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+  });
+
+  closeModalButton.addEventListener("click", () => {
+      modal.classList.add("hidden");
+  });
+
+  const openModalButton2 = document.getElementById("openModalButton2");
+  const closeModalButton2 = document.getElementById("closeModalButton2");
+  const modal2 = document.getElementById("myModal2");
+
+  openModalButton2.addEventListener("click", () => {
+      modal2.classList.remove("hidden");
+  });
+
+  closeModalButton2.addEventListener("click", () => {
+      modal2.classList.add("hidden");
+  });
+
+  // New button and modal
+  const openModalButton3 = document.getElementById("openModalButton3");
+  const closeModalButton3 = document.getElementById("closeModalButton3");
+  const modal3 = document.getElementById("myModal3");
+
+  openModalButton3.addEventListener("click", () => {
+      modal3.classList.remove("hidden");
+  });
+
+  closeModalButton3.addEventListener("click", () => {
+      modal3.classList.add("hidden");
+  });
+
+  // New button and modal
+  const openModalButton4 = document.getElementById("openModalButton4");
+  const closeModalButton4 = document.getElementById("closeModalButton4");
+  const modal4 = document.getElementById("myModal4");
+
+  openModalButton4.addEventListener("click", () => {
+      modal4.classList.remove("hidden");
+  });
+
+  closeModalButton4.addEventListener("click", () => {
+      modal4.classList.add("hidden");
+  });
+
+  // New button and modal
+  const openModalButton5 = document.getElementById("openModalButton5");
+  const closeModalButton5 = document.getElementById("closeModalButton5");
+  const modal5 = document.getElementById("myModal5");
+
+  openModalButton5.addEventListener("click", () => {
+      modal5.classList.remove("hidden");
+  });
+
+  closeModalButton5.addEventListener("click", () => {
+      modal5.classList.add("hidden");
+  });
+</script>
+<!--Modals-->
+
+<footer class="w-screen bg-gray-800 text-white py-6">
+  <div class="container mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+      <!-- First Quadrant (Logo) -->
+      <div class="lg:col-span-1 text-center flex flex-col justify-center items-center">
+        <img src="images/BacoLogo.png" alt="Logo" class="h-64 mx-auto">
+      </div>
+      
+      <!-- Second Quadrant (Title and Links) -->
+      <div class="lg:col-span-1">
+        <h4 class="text-xl font-bold">Find Us</h4>
+        <p class="text-lg mt-2">
+          Municipal Hall Building, Bacolor, Pampanga
+        </p>
+      </div>
+      
+      <!-- Third Quadrant (Title and Links) -->
+      <div class="lg:col-span-1">
+        <h4 class="text-xl font-semibold">ABOUT GOVPH</h4>
+        <p class="text-md mt-2">Learn more about the Philippine government, its structure, how government works and the people behind it.</p>
+        <ul class="mt-2">
+          <li class="text-sm"><a href="http://www.gov.ph">GOV.PH</a></li>
+          <li class="text-sm"><a href="https://www.gov.ph/data">Open Data Portal</a></li>
+          <li class="text-sm"><a href="https://www.officialgazette.gov.ph">Official Gazette</a></li>
+        </ul>
+      </div>
+      
+      <!-- Fourth Quadrant (Title and Links) -->
+      <div class="lg:col-span-1">
+        <h4 class="text-lg font-semibold">About Us</h4>
+        <ul class="mt-2">
+          <li><a href="about-us.html">Meet the Devs</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

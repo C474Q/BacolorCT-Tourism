@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/png">
+    <title>Municipality | Bacolor City Tourism</title>
+    <style>
+
+    </style>
+</head>
+<body class="relative bg-cover bg-fixed bg-no-repeat" style="background-image: url(images/background-muni.png);">
+<div class="fixed inset-y-0 right-0 sm:w-[20vw] md:w-[12vw] lg:w-[10vw] h-[40vh] flex flex-col items-center justify-between z-40">
+    <!-- Logo -->
+    <div class="py-2">
+        <button title="Show Menu" id="scrollToTop" class="hover:scale-110 transform transition-transform duration-300 ease-in-out" onclick="toggleNavIcons()">
+            <img src="images/BacoLogo.png" alt="Logo" class="w-[20vw] sm:w-[17vw] md:w-[9vw] lg:w-[7vw] h-auto">
+        </button>
+    </div>
+    
+    <!-- Navigation Icons -->
+    <div class="flex flex-col p-2 rounded-2xl bg-opacity-40 bg-[#1b2021] w-[20vw] sm:w-[17vw] md:w-[9vw] lg:w-[7vw] justify-center items-center space-y-4 mt-2 h-full hidden">
+        <a href="index.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+            <i title="Home" class="fas fa-home text-xl"></i>
+        </a>
+        <a href="municipality.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+            <i title="Municipality" class="fas fa-landmark text-xl"></i>
+        </a>
+        <a href="history.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+            <i title="History" class="fas fa-hourglass-end text-xl"></i>
+        </a>
+        <a href="map.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+            <i title="Landmarks" class="fas fa-map-marker-alt text-xl"></i>
+        </a>
+        <a href="fnf.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+            <i title="Foods and Festivities" class="fas fa-utensils text-xl"></i>
+        </a>
+    </div>
+</div>
+
+<script>
+    // JavaScript function to toggle the navigation icons
+    function toggleNavIcons() {
+        var navIcons = document.querySelector('.flex.flex-col.justify-center.items-center.space-y-4');
+        navIcons.classList.toggle('hidden');
+    }
+</script>
+
+<div>
+<div class="w-screen overflow-x-hidden">
+<div class="flex flex-col relative overflow-x-hidden w-screen">
+        <div class="flex flex-col justify-center absolute bottom-0 left-0 bg-[#38182F] bg-opacity-80 w-[60vw] h-[40vh] p-2 rounded-tr-3xl">
+            <div>
+                <p class="font-semibold text-sm text-[#f7f9f9]" style="font-family: 'Merriweather', serif;">Municipality of</p>
+                <h1 class="font-bold text-left text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl text-[#f7f9f9]" style="font-family: 'Merriweather', serif;">Bacolor</h1>
+            </div>
+            <p class="text-sm text-[#f7f9f9] overflow-y-auto" style="font-family: 'Judson', serif;">Bacolor, situated in Pampanga, Philippines, is a town celebrated for its resilience despite frequent encounters with lahar flows from Mount Pinatubo. Its well-preserved Spanish colonial architecture and vibrant traditions, exemplified by the partially buried San Guillermo Parish Church, are a testament to its enduring spirit. Visitors can enjoy Kapampangan cuisine and partake in local festivals, like the Feast of San Guillermo, making Bacolor a cultural gem in the Philippines.</p>
+        </div>
+        <div class="flex h-[70vh] transition-transform duration-300 ease-in-out" id="imageSlider">
+            <div class="w-screen h-full flex-shrink-0 mySlides">
+                <img src="images/municipality/hdr-1.webp" alt="Image 1" class="w-full h-full object-cover object-center">
+            </div>
+            <div class="w-screen h-full flex-shrink-0 mySlides">
+                <img src="images/municipality/hdr-2.jpg" alt="Image 2" class="w-full h-full object-cover object-center">
+            </div>
+            <div class="w-screen h-full flex-shrink-0 mySlides">
+                <img src="images/municipality/hdr-3.jpg" alt="Image 3" class="w-full h-full object-cover object-center">
+            </div>
+            <div class="w-screen h-full flex-shrink-0 mySlides">
+              <img src="images/municipality/hdr-4.webp" alt="Image 4" class="w-full h-full object-cover object-center">
+            </div>
+            <div class="w-screen h-full flex-shrink-0 mySlides">
+              <img src="images/municipality/hdr-5.jpg" alt="Image 5" class="w-full h-full object-cover object-center">
+            </div>
+        </div>
+        <button id="prevBtn" class="absolute top-1/2 left-0 transform -translate-y-1/2 text-white bg-black bg-opacity-50 hover:bg-opacity-75 p-2 rounded-l-md">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+        </button>
+        <button id="nextBtn" class="z-40 absolute top-1/2 right-0 transform -translate-y-1/2 text-white bg-black bg-opacity-50 hover:bg-opacity-75 p-2 rounded-r-md">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+        </button>
+</div>
+
+<script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+      
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+      
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length};
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          x[slideIndex - 1].style.display = "block";
+        }
+      
+        function nextSlide() {
+          plusDivs(1);
+        }
+      
+        function prevSlide() {
+          plusDivs(-1);
+        }
+      
+        document.getElementById("prevBtn").addEventListener("click", prevSlide);
+        document.getElementById("nextBtn").addEventListener("click", nextSlide);
+        document.getElementById("prevSlide").addEventListener("click", prevSlide);
+        document.getElementById("nextSlide").addEventListener("click", nextSlide);
+      
+        function startAutoSlideshow() {
+          setInterval(nextSlide, 5000);
+        }
+      
+        // Start the automatic slideshow when the page loads
+        window.onload = startAutoSlideshow;
+</script>
+
+
+<div class="container mx-auto border border-gray-300 flex flex-col my-4">
+    <!-- Header -->
+    <div class="bg-[#298946] text-white font-bold p-4 text-xl md:text-2xl lg:text-4xl">
+        <!-- Add header content here -->
+        <h2 style="font-family: 'Merriweather', serif;">Media</h2>
+    </div>
+
+    <!-- Content Container -->
+    <div class="flex flex-col lg:flex-row lg:justify-between bg-[#94a07c]">
+        <!-- Left Container for Content and Images -->
+        <div class="w-full lg:w-1/2 p-4">
+            <!-- Add your content and images here -->
+            <iframe style="width: 100%; height: 100%;"
+                src="https://www.youtube.com/embed/tuO6oCxZU-s">
+            </iframe>
+        </div>
+
+        <!-- Right Container for Embedded Facebook Page -->
+        <div class="w-full lg:w-1/2 p-4">
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v18.0" nonce="EsXSAZhj"></script>
+            <div class="fb-page" data-href="https://www.facebook.com/hrdvilladebacolor" data-tabs="timeline" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/hrdvilladebacolor" class="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/hrdvilladebacolor">Municipality of Bacolor</a>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-[#78a1bb] bg-opacity-20 w-screen h-[50vh] flex flex-col items-center justify-center p-4 my-4">
+    <div id="openModalButton" class="bg-[#283044] text-[#f8f4e3] cursor-pointer rounded-3xl hover:scale-105 hover:transition-transform ease-in-out duration-300 w-[90%] h-[80%] flex flex-col items-center justify-start p-4">
+        <h1 class="font-bold text-3xl sm:text-6xl md:text-7xl align-top" style="font-family: 'Merriweather', serif;">City Council</h1>
+        <p class="mt-4 text-sm sm:text-md md:text-lg overflow-y-auto" style="font-family: 'PT Sans', sans-serif;">The Bacolor City Council is the governing body of this resilient Philippine municipality, working diligently to address the community's needs and uphold its rich heritage. Comprising dedicated members, the council plays a pivotal role in shaping Bacolor's future while preserving its cultural identity.</p>
+    </div>
+</div>
+
+<div id="myModal" class="hidden fixed z-50 inset-0 flex items-center justify-center overflow-auto">
+  <div class="modal-content bg-white flex flex-col items-center w-[85vw] h-[85vh] shadow-lg text-center relative bg-prp border-2 border-black">
+      <div class="h-[5%] w-[100%]"> 
+        <!-- Close Button -->
+        <button id="closeModalButton" class="absolute right-0 mr-2 mt-4 sm:mr-4 bg-gray-500 rounded-xl bg-opacity-30 hover:scale-110 hover:bg-opacity-100 text-gray-900 hover:text-black focus:outline-none focus:text-black">
+            <span class="sr-only">Close</span>
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+      </div>
+
+      <div class="w-[90%] h-[90%] bottom-0">
+        <iframe src="council.html" class="w-full h-full"></iframe>
+      </div>
+
+      <div id="closeModalButtonOut" class="w-screen h-screen fixed top-0 bg-black bg-opacity-50 -z-50"></div>
+  </div>
+</div>
+
+<div class="text-[#f7f9f9] grid grid-cols-1 sm:grid-cols-2 gap-4 h-[100vh] sm:h-[50vh] w-screen my-4 p-4">
+    <div class="bg-[#726ad8] p-4 flex flex-col items-center">
+      <h2 class="text-4xl font-bold mb-2" style="font-family: 'Merriweather', serif;">Mission</h2>
+      <p class="text-lg" style="font-family: 'PT Sans', sans-serif;">Through a well-crafted Development Agenda, committed public servants and responsive community, we shall all together achieve sustainable human and economic growth.</p>
+    </div>
+    <div class="bg-[#984447] p-4 flex flex-col items-center">
+      <h2 class="text-4xl font-bold mb-2" style="font-family: 'Merriweather', serif;">Vision</h2>
+      <p class="text-lg" style="font-family: 'PT Sans', sans-serif;">We envision Bacolor as the premier center of Kapampangan arts and culture, history and education, inhabited by God centered, resilient and empowered citizenry living in a safe and friendly environment, governed by a highly competitive and strong-willed leadership moving towards a dynamic center for sustainable human and socio-economic development.</p>
+    </div>
+</div>
+
+<div class="my-4 w-screen flex flex-col items-center justify-center">
+<div class="w-[95vw] h-[50vh] bg-gray-300 rounded-lg shadow-md">
+    <iframe
+      width="100%"
+      height="100%"
+      frameborder="0"
+      scrolling="no"
+      marginheight="0"
+      marginwidth="0"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3853.9266922475363!2d120.64959151519156!3d14.99677408955119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f625d57350d9%3A0xc1bb51cbb60c9f50!2sBacolor%20Municipal%20Hall!5e0!3m2!1sen!2sph!4v1621990159174!5m2!1sen!2sph"
+    ></iframe>
+</div>
+</div>
+</div>
+
+
+<script>
+  const openModalButton = document.getElementById("openModalButton");
+  const closeModalButton = document.getElementById("closeModalButton");
+  const closeModalButtonOut = document.getElementById("closeModalButtonOut");
+  const modal = document.getElementById("myModal");
+
+  openModalButton.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+  });
+
+  closeModalButton.addEventListener("click", () => {
+      modal.classList.add("hidden");
+  });
+
+  closeModalButtonOut.addEventListener("click", () => {
+      modal.classList.add("hidden");
+  });
+</script>
+
+<footer class="w-screen bg-gray-800 text-white py-6">
+  <div class="container mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+      <!-- First Quadrant (Logo) -->
+      <div class="lg:col-span-1 text-center flex flex-col justify-center items-center">
+        <img src="images/BacoLogo.png" alt="Logo" class="h-64 mx-auto">
+      </div>
+      
+      <!-- Second Quadrant (Title and Links) -->
+      <div class="lg:col-span-1">
+        <h4 class="text-xl font-bold">Find Us</h4>
+        <p class="text-lg mt-2">
+          Municipal Hall Building, Bacolor, Pampanga
+        </p>
+      </div>
+      
+      <!-- Third Quadrant (Title and Links) -->
+      <div class="lg:col-span-1">
+        <h4 class="text-xl font-semibold">ABOUT GOVPH</h4>
+        <p class="text-md mt-2">Learn more about the Philippine government, its structure, how government works and the people behind it.</p>
+        <ul class="mt-2">
+          <li class="text-sm"><a href="http://www.gov.ph">GOV.PH</a></li>
+          <li class="text-sm"><a href="https://www.gov.ph/data">Open Data Portal</a></li>
+          <li class="text-sm"><a href="https://www.officialgazette.gov.ph">Official Gazette</a></li>
+        </ul>
+      </div>
+      
+      <!-- Fourth Quadrant (Title and Links) -->
+      <div class="lg:col-span-1">
+        <h4 class="text-lg font-semibold">About Us</h4>
+        <ul class="mt-2">
+          <li><a href="about-us.html">Meet the Devs</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+
+</body>
+</html>

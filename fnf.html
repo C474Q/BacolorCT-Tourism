@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel:wght@400;500;600;700;800;900&family=DM+Serif+Text:ital@0;1&family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Judson:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/png">
+    <title>Foods and Festivities | Bacolor City Tourism</title>
+    <style>
+      .slider-container {
+            height: 100vh; /* Set the desired height for the slider */
+        }
+
+    </style>
+</head>
+<body class="bg-cover bg-fixed bg-center bg-no-repeat" style="background-image: url(images/FNF/background.png);">
+
+<!--Nav-->
+<div class="fixed inset-y-0 right-0 sm:w-[20vw] md:w-[12vw] lg:w-[10vw] h-[40vh] flex flex-col items-center justify-between z-50">
+  <!-- Logo -->
+  <div class="py-2">
+      <button title="Show Menu" id="scrollToTop" class="hover:scale-110 transform transition-transform duration-300 ease-in-out" onclick="toggleNavIcons()">
+          <img src="images/BacoLogo.png" alt="Logo" class="w-[20vw] sm:w-[17vw] md:w-[9vw] lg:w-[7vw] h-auto">
+      </button>
+  </div>
+  
+  <!-- Navigation Icons -->
+  <div class="flex flex-col p-2 rounded-2xl bg-opacity-40 bg-[#1b2021] w-[20vw] sm:w-[17vw] md:w-[9vw] lg:w-[7vw] justify-center items-center space-y-4 mt-2 h-full hidden">
+      <a href="index.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+          <i title="Home" class="fas fa-home text-xl"></i>
+      </a>
+      <a href="municipality.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+          <i title="Municipality" class="fas fa-landmark text-xl"></i>
+      </a>
+      <a href="history.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+          <i title="History" class="fas fa-hourglass-end text-xl"></i>
+      </a>
+      <a href="map.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+          <i title="Landmarks" class="fas fa-map-marker-alt text-xl"></i>
+      </a>
+      <a href="fnf.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+          <i title="Foods and Festivities" class="fas fa-utensils text-xl"></i>
+      </a>
+  </div>
+</div>
+
+<script>
+  // JavaScript function to toggle the navigation icons
+  function toggleNavIcons() {
+      var navIcons = document.querySelector('.flex.flex-col.justify-center.items-center.space-y-4');
+      navIcons.classList.toggle('hidden');
+  }
+</script>
+<!--Nav-->
+
+<div class="border-y-[2vh] border-[#1b2021] h-[50vh] w-screen flex flex-col items-center justify-center relative bg-prp" style="background-image: url(images/FNF/background-hdr.png);">
+  <div class="border-8 border-[#1b2021] h-[80vw] w-[40vw] sm:h-[50vh] sm:w-[35vw] md:w-[25vw] lg:w-[20vw] xl:w-[15vw]
+   absolute left-0 rounded-r-full bg-prp" style="background-image: url(images/FNF/Recipe-Featured-SizzlingTofuSisig-2880x1896-1-scaled-1xqc5rq8mx1g747yzdw2atpl5g8vgua35xffazhgy7vo.jpg);"></div>
+  <div class="bg-[#07A0C3] bg-opacity-40 h-[50%] w-screen flex flex-col items-start justify-center">
+    <div class="flex flex-col justify-center text-[#1b2021] w-auto h-[85%] ml-[35vw] sm:ml-[30vw] md:ml-[20vw] lg:ml-[15vw] xl:ml-[10vw] p-4 bg-prp" style="background-image: url(images/FNF/title-bg.png);">
+      <h1 class="font-black italic text-2xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl ml-[5vw]" style="font-family: 'Playfair Display SC', serif;">Foods & Festivities</h1>
+    </div>
+  </div>
+</div>
+
+
+<div class="flex flex-col items-center justify-center w-screen h-screen sm:flex-row overflow-hidden">
+
+  <div class="w-full h-full p-4 m-4 rounded-lg relative">
+    <div title="Foods" id="openModalButton" class="-translate-x-8 cursor-pointer w-full h-full flex flex-col items-center justify-center relative group">
+        <div class="absolute shadow-lg shadow-gray-700 border-2 border-black w-[40vw] h-[50vw] md:w-[32vw] md:h-[40vw] lg:w-[24vw] lg:h-[30vw] xl:w-[20vw] xl:h-[25vw] 
+        transition-transform transform rotate-6 translate-x-3 group-hover:rotate-[15deg] group-hover:translate-x-32 hover:-translate-y-16 group-hover:scale-105 bg-prp"
+        style="background-image: url(images/FNF/Menu_Kakanin.png);">
+          <div class="w-[100%] h-[20%] flex flex-col items-center justify-center">
+            <h1 class="text-xl md:text-4xl font-black italic" style="font-family: 'Playfair Display SC', serif;">Kakanin</h1>
+          </div>
+        </div>
+
+        <div class="absolute shadow-lg shadow-gray-700 border-2 border-black w-[40vw] h-[50vw] md:w-[32vw] md:h-[40vw] lg:w-[24vw] lg:h-[30vw] xl:w-[20vw] xl:h-[25vw] 
+        transition-transform transform rotate-3 translate-x-1 group-hover:rotate-12 group-hover:translate-x-28 hover:-translate-y-16 group-hover:scale-105 bg-prp"
+        style="background-image: url(images/FNF/Menu_Tamales.png);">
+          <div class="w-[100%] h-[20%]  flex flex-col items-center justify-center">
+            <h1 class="text-xl md:text-4xl font-black italic" style="font-family: 'Playfair Display SC', serif;">Tamales</h1>
+          </div>
+        </div>
+
+        <div class="absolute shadow-lg shadow-gray-700 border-2 border-black w-[40vw] h-[50vw] md:w-[32vw] md:h-[40vw] lg:w-[24vw] lg:h-[30vw] xl:w-[20vw] xl:h-[25vw] 
+        transition-transform transform rotate-2 group-hover:rotate-6 group-hover:translate-x-20 hover:-translate-y-16 group-hover:scale-105 bg-prp"
+        style="background-image: url(images/FNF/Menu_Biringhe.png);">
+          <div class="w-[100%] h-[20%] flex flex-col items-center justify-center">
+            <h1 class="text-xl md:text-4xl font-black italic" style="font-family: 'Playfair Display SC', serif;">Biringhe</h1>
+          </div>
+        </div>
+        
+        <div class="absolute shadow-lg shadow-gray-700 border-2 border-black w-[40vw] h-[50vw] md:w-[32vw] md:h-[40vw] lg:w-[24vw] lg:h-[30vw] xl:w-[20vw] xl:h-[25vw] 
+        transition-transform transform rotate-1 -translate-x-2 group-hover:rotate-3 group-hover:translate-x-12 hover:-translate-y-16 group-hover:scale-105 bg-prp"
+        style="background-image: url(images/FNF/Menu_Sisig.png);">
+          <div class="w-[100%] h-[20%] flex flex-col items-center justify-center">
+            <h1 class="text-xl md:text-4xl font-black italic" style="font-family: 'Playfair Display SC', serif;">Sisig</h1>
+          </div>
+        </div>
+        
+        <div class="absolute shadow-lg shadow-gray-700 border-2 border-black w-[40vw] h-[50vw] md:w-[32vw] md:h-[40vw] lg:w-[24vw] lg:h-[30vw] xl:w-[20vw] xl:h-[25vw] 
+        transition-transform transform rotate-0 -translate-x-3 bg-prp group-hover:scale-105" style="background-image: url(images/FNF/Menu.png);">
+          <div class="w-[100%] h-[20%] flex flex-col items-center justify-center">
+            <h1 class="text-xl md:text-4xl font-black italic" style="font-family: 'Playfair Display SC', serif;">Foods</h1>
+          </div>
+        </div>
+
+        <div class="sm:w-[65vw] sm:h-[65vw] md:w-[45vw] md:h-[45vw] lg:w-[30vw] lg:h-[30vw] bg-prp absolute -z-50" style="background-image: url(images/FNF/food.png);">
+        </div>
+    </div>
+  </div>
+
+  <div class="w-full h-full p-4 m-4 my-4 rounded-lg relative">
+    <div title="Festivities" id="openModalButton2" class="cursor-pointer w-full h-full flex flex-col items-center justify-center relative group">
+        <div class="absolute bg-prp w-[40vw] h-[40vw] md:w-[32vw] md:h-[32vw] lg:w-[24vw] lg:h-[24vw] xl:w-[20vw] xl:h-[20vw] 
+        transition-transform transform rotate-3 translate-x-6 
+        group-hover:scale-105 group-hover:-rotate-6 group-hover:translate-x-28 group-hover:translate-y-12" style="background-image: url(images/FNF/Festivities_3.png);">
+        </div>
+
+        <div class="absolute bg-prp w-[40vw] h-[40vw] md:w-[32vw] md:h-[32vw] lg:w-[24vw] lg:h-[24vw] xl:w-[20vw] xl:h-[20vw] 
+        transition-transform transform rotate-2 translate-x-2 -translate-y-6
+        group-hover:scale-105 group-hover:rotate-2 group-hover:translate-x-6 group-hover:-translate-y-16" style="background-image: url(images/FNF/Festivities_2.png);">
+        </div>
+        
+        <div class="absolute bg-prp w-[40vw] h-[40vw] md:w-[32vw] md:h-[32vw] lg:w-[24vw] lg:h-[24vw] xl:w-[20vw] xl:h-[20vw] 
+        transition-transform transform rotate-1 -translate-x-2 translate-y-6
+        group-hover:scale-105 group-hover:rotate-3 group-hover:-translate-x-16 group-hover:translate-y-16 -z-10" style="background-image: url(images/FNF/Festivities_1.png);">
+        </div>
+        
+        <div class="absolute bg-prp w-[40vw] h-[40vw] md:w-[32vw] md:h-[32vw] lg:w-[24vw] lg:h-[24vw] xl:w-[20vw] xl:h-[20vw] 
+        transition-transform transform rotate-0 group-hover:scale-110" style="background-image: url(images/FNF/Festivities.png);">
+          <div class="w-full h-full flex flex-col items-center justify-center">
+            <div class="text-[#1b2021] w-full h-[50%] flex flex-col items-center justify-center">
+              <h1 class="font-bold text-2xl md:text-4xl lg:text-6xl group-hover:scale-105" style="font-family: 'Abril Fatface', serif;">Festivities</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="sm:w-[65vw] sm:h-[65vw] md:w-[45vw] md:h-[45vw] lg:w-[30vw] lg:h-[30vw] bg-prp absolute -z-50" style="background-image: url(images/FNF/fes_bg.png);">
+        </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+    // JavaScript function to handle image selection and display
+    function setupImageGallery(largeImageId, sliderContainerId) {
+        document.addEventListener("DOMContentLoaded", function() {
+            const largeImage = document.getElementById(largeImageId);
+            const imageSliderItems = document.querySelectorAll(`#${sliderContainerId} .slider-item`);
+        
+            imageSliderItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    // Set the large image source to the selected image
+                    largeImage.src = item.querySelector('img').src;
+                });
+            });
+        });
+    }
+
+    // Example usage:
+    setupImageGallery('largeImage1', 'sliderContainer1');
+    setupImageGallery('largeImage2', 'sliderContainer2');
+    setupImageGallery('largeImageA', 'sliderContainerA');
+    setupImageGallery('largeImageB', 'sliderContainerB');
+</script>
+
+<div id="myModal" class="hidden fixed z-50 inset-0 flex items-center justify-center overflow-auto">
+  <div class="modal-content flex flex-col items-center w-[85vw] h-[85vh] shadow-lg text-center relative bg-prp border-2 border-black" style="background-image: url(images/FNF/food_bg.png);">
+      <div class="h-[5%] w-[100%]">
+        <h1 class="absolute left-0 ml-4 mt-2 font-semibold italic text-2xl" style="font-family: 'Playfair Display SC', serif;">Foods</h1>  
+        <!-- Close Button -->
+        <button id="closeModalButton" class="absolute right-0 mr-2 mt-4 sm:mr-4 bg-gray-500 rounded-xl bg-opacity-30 hover:scale-110 hover:bg-opacity-100 text-gray-900 hover:text-black focus:outline-none focus:text-black">
+            <span class="sr-only">Close</span>
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+      </div>
+
+      <div class="w-[90%] h-[90%] bottom-0">
+        <iframe src="Foods.html" class="w-full h-full"></iframe>
+      </div>
+
+      <div class="w-screen h-screen fixed top-0 bg-black bg-opacity-50 -z-50"></div>
+  </div>
+</div>
+
+<div id="myModal2" class="hidden fixed z-50 inset-0 flex items-center justify-center overflow-auto">
+  <div class="modal-content flex flex-col items-center w-[85vw] h-[85vh] bg-green-300 rounded shadow-lg text-center relative bg-prp border-2 border-black" style="background-image: url(images/FNF/letter.png);">
+      <div class="h-[5%] w-[100%] relative">
+        <!-- Close Button -->
+        <div class="w-[20vh] h-[10vh] absolute right-0 mr-2 mt-4 sm:mr-4 bg-prp" style="background-image: url(images/FNF/stamp.png);"></div>
+
+        <button id="closeModalButton2" class="absolute right-0 mr-2 mt-4 sm:mr-4 w-[12vh] h-[12vh] flex flex-col items-center justify-center
+        text-red-500 hover:text-red-400 focus:outline-none focus:text-red-400 hover:scale-125 hover:transition-transform ease-in-out duration-300 bg-prp" style="background-image: url(images/FNF/circle.png);">
+            <span class="sr-only">Close</span>
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+      </div>
+
+      <div class="w-[90%] h-[90%] bottom-0 z-10">
+      <iframe src="Festivities.html" class="w-full h-full"></iframe>
+      </div>
+
+      <div class="w-screen h-screen fixed top-0 bg-black bg-opacity-50 -z-50"></div>
+  </div>
+</div>
+
+<script>
+  const openModalButton = document.getElementById("openModalButton");
+  const closeModalButton = document.getElementById("closeModalButton");
+  const modal = document.getElementById("myModal");
+
+  openModalButton.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+  });
+
+  closeModalButton.addEventListener("click", () => {
+      modal.classList.add("hidden");
+  });
+
+  const openModalButton2 = document.getElementById("openModalButton2");
+  const closeModalButton2 = document.getElementById("closeModalButton2");
+  const modal2 = document.getElementById("myModal2");
+
+  openModalButton2.addEventListener("click", () => {
+      modal2.classList.remove("hidden");
+  });
+
+  closeModalButton2.addEventListener("click", () => {
+      modal2.classList.add("hidden");
+  });
+</script>
+
+<footer class="w-screen bg-gray-800 text-white py-6">
+  <div class="container mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+      <!-- First Quadrant (Logo) -->
+      <div class="lg:col-span-1 text-center flex flex-col justify-center items-center">
+        <img src="images/BacoLogo.png" alt="Logo" class="h-64 mx-auto">
+      </div>
+      
+      <!-- Second Quadrant (Title and Links) -->
+      <div class="lg:col-span-1">
+        <h4 class="text-xl font-bold">Find Us</h4>
+        <p class="text-lg mt-2">
+          Municipal Hall Building, Bacolor, Pampanga
+        </p>
+      </div>
+      
+      <!-- Third Quadrant (Title and Links) -->
+      <div class="lg:col-span-1">
+        <h4 class="text-xl font-semibold">ABOUT GOVPH</h4>
+        <p class="text-md mt-2">Learn more about the Philippine government, its structure, how government works and the people behind it.</p>
+        <ul class="mt-2">
+          <li class="text-sm"><a href="http://www.gov.ph">GOV.PH</a></li>
+          <li class="text-sm"><a href="https://www.gov.ph/data">Open Data Portal</a></li>
+          <li class="text-sm"><a href="https://www.officialgazette.gov.ph">Official Gazette</a></li>
+        </ul>
+      </div>
+      
+      <!-- Fourth Quadrant (Title and Links) -->
+      <div class="lg:col-span-1">
+        <h4 class="text-lg font-semibold">About Us</h4>
+        <ul class="mt-2">
+          <li><a href="about-us.html">Meet the Devs</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

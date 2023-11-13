@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel:wght@400;500;600;700;800;900&family=DM+Serif+Text:ital@0;1&family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Judson:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <style>
+
+        .pop-up {
+            opacity: 0;
+            transform: scale(1.2);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        .visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="w-screen h-screen bg-red-200">
+
+    </div>
+
+    <div class="w-screen h-screen bg-yellow-200 flex flex-col items-center">
+        <div class="pop-up h-64 w-64 bg-blue-500 m-4">
+            Container 1
+        </div>
+        <div class="pop-up h-64 w-64 bg-green-500 m-4">
+            Container 2
+        </div>
+        <div class="pop-up h-64 w-64 bg-red-500 m-4">
+            Container 3
+        </div>
+    </div>
+
+    <script>
+        const containers = document.querySelectorAll('.pop-up');
+
+        function checkElementsInView() {
+            containers.forEach((container, index) => {
+                const rect = container.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+
+                if (rect.top <= windowHeight * 0.8 && rect.bottom >= 0) {
+                    if (!container.classList.contains('visible')) {
+                        // Add a delay based on the index
+                        setTimeout(() => {
+                            container.classList.add('visible');
+                        }, index * 200); // Adjust the delay (200ms in this example)
+                    }
+                } else {
+                    container.classList.remove('visible');
+                }
+            });
+        }
+
+        // Initial check
+        checkElementsInView();
+
+        // Check elements on scroll
+        window.addEventListener('scroll', checkElementsInView);
+    </script>
+</body>
+</html>

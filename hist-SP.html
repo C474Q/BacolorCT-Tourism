@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel:wght@400;500;600;700;800;900&family=DM+Serif+Text:ital@0;1&family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Judson:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <style>
+        .slider-container {
+            height: 100vh; /* Set the desired height for the slider */
+        }
+    </style>
+</head>
+<body>
+    <div class="overflow-hidden hidden sm:block">
+      <div class="flex justify-center items-center w-screen h-screen space-x-2">
+            <div class="w-1/4 flex justify-center items-center">
+                <!-- Image Slider -->
+                <div id="sliderContainer1" class="slider-container flex flex-col justify-center items-center overflow-y-auto">
+                    <div class="slider-item p-2" onclick="changeImage('image1.jpg')">
+                        <img src="images/history/Spanish.jpg" alt="Image 1" class="w-full max-h-[30vh] object-cover cursor-pointer">
+                    </div>
+                    <div class="slider-item p-2" onclick="changeImage('image2.jpg')">
+                        <img src="images/history/SP/19 century capito town bacolor.jpg" alt="Image 2" class="w-full max-h-[30vh] object-cover cursor-pointer">
+                    </div>
+                    <div class="slider-item p-2" onclick="changeImage('image3.jpg')">
+                        <img src="images/history/SP/Puig1 copy.jpg" alt="Image 3" class="w-full max-h-[30vh] object-cover cursor-pointer">
+                    </div>
+                </div>
+            </div>
+            <div class="w-3/4 h-screenp-2 relative flex flex-col justify-center items-center">
+                <div class="bg-[#a76d61] bg-opacity-70 rounded-lg w-[40vw] h-[30vw] absolute right-0 p-4 flex items-center">
+                    <div class="absolute right-0 text-[#f7f9f9] flex flex-col">
+                        <h1 class="font-bold text-4xl ml-2" style="font-family: 'Judson', serif;">Spanish</h1>
+                        <div class="overflow-y-auto p-2 w-full h-[25vw]">
+                            <p class="overflow-y-auto" style="font-family: 'Gelasio', serif;">
+                                Bacolor, a town located in the province of Pampanga in the Philippines, has a rich history dating back to the Spanish colonial era. During the Spanish colonial period, which lasted for more than three centuries, Bacolor played a significant role in the social, economic, and political landscape of the region.<br>
+                                <br>
+                                Here are some key points about Bacolor during the Spanish era:
+                                <ol style="padding: 5px; width: 100%; font-family: 'Gelasio', serif;">
+                                    <li><strong>Establishment as a Town:</strong><br> Bacolor was established as a town in 1571 by Spanish colonizers. It was part of the encomienda system, where local leaders were entrusted with the responsibility of overseeing the indigenous population and collecting tribute for the Spanish crown.<br></li>
+                                
+                                    <li><strong>Baroque Architecture:</strong><br> One of the most notable features of Bacolor's Spanish-era history is its impressive baroque architecture. The town's historic structures include the San Guillermo Church, which was built in the early 1600s and is renowned for its grandeur. The church's intricate design and ornate decorations are representative of the Spanish colonial architectural style.<br></li>
+                                
+                                    <li><strong>Capital of Pampanga:</strong><br> Bacolor served as the capital of Pampanga province during various periods of the Spanish colonial era. The town's strategic location made it an important center of governance and administration.<br>
+                                
+                                    <li><strong>Volcanic Eruptions:</strong><br> Bacolor's history is also marked by the destructive impact of natural disasters. The most significant of these was the eruption of Mount Pinatubo in 1991. The volcanic ash and lahar (mudflow) resulting from the eruption buried much of the town, including its historic structures. The lahar flow permanently altered the landscape and caused the abandonment of the old town center.<br></li>
+                                
+                                    <li><strong>Religious and Cultural Influence:</strong><br> As in many Spanish colonial towns, the Catholic Church played a central role in Bacolor's social and cultural life. Religious festivals and processions were an integral part of the community's identity. These traditions continue to be observed in modern times.<br></li>
+                                
+                                    <li><strong>Agriculture and Economy:</strong><br> Bacolor's economy during the Spanish era was primarily based on agriculture. The fertile plains surrounding the town were used for cultivating rice, sugar cane, and other crops. The Spanish colonial authorities introduced various agricultural techniques and crops to the region.<br></li>
+                                
+                                    <li><strong>Revolts and Resistance:</strong><br> Like other parts of the Philippines, Bacolor experienced local uprisings and resistance against Spanish rule. These revolts were often sparked by issues such as forced labor, excessive taxes, and abuse of power by Spanish authorities.<br></li>
+                                
+                                    <li><strong>American Colonial Period:</strong><br> The Spanish-American War in 1898 marked the end of Spanish colonial rule in the Philippines. Bacolor, like the rest of the country, transitioned to American colonial administration. This era brought about significant changes in governance, infrastructure, and education.<br></li>
+                                
+                                </ol>
+                                Overall, Bacolor's history during the Spanish colonial era is a complex tapestry of culture, architecture, religion, and socio-political dynamics. The remnants of this era can still be seen in the town's surviving structures and in the cultural heritage of its people.<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Large Image Display -->
+                <div class="h-full p-2">
+                    <img id="largeImage1" src="images/history/Spanish.jpg" alt="Large Image" class="w-full h-full object-cover">
+                </div>
+            </div>
+      </div>
+    </div>
+
+    <div class="overflow-hidden block sm:hidden">
+        <div class="flex flex-col h-screen">
+            <!-- Large Image Display -->
+            <div class="h-3/4 p-2 relative flex justify-center items-center">
+                <div class="bg-[#a76d61] bg-opacity-70 w-[70vw] h-[70vh] absolute right-0 mr-5 p-4 flex items-center">
+                    <div class="absolute right-0 text-[#f7f9f9]">
+                        <h1 class="font-bold text-2xl ml-2" style="font-family: 'Judson', serif;">Spanish</h1>
+                        <div class="overflow-y-auto p-2 w-full h-[50vh]">
+                            <p class="overflow-y-auto" style="font-family: 'Gelasio', serif;">
+                                Bacolor, a town located in the province of Pampanga in the Philippines, has a rich history dating back to the Spanish colonial era. During the Spanish colonial period, which lasted for more than three centuries, Bacolor played a significant role in the social, economic, and political landscape of the region.<br>
+                                <br>
+                                Here are some key points about Bacolor during the Spanish era:
+                                <ol style="padding: 5px; width: 100%; font-family: 'Gelasio', serif;">
+                                    <li><strong>Establishment as a Town:</strong><br> Bacolor was established as a town in 1571 by Spanish colonizers. It was part of the encomienda system, where local leaders were entrusted with the responsibility of overseeing the indigenous population and collecting tribute for the Spanish crown.<br></li>
+                                
+                                    <li><strong>Baroque Architecture:</strong><br> One of the most notable features of Bacolor's Spanish-era history is its impressive baroque architecture. The town's historic structures include the San Guillermo Church, which was built in the early 1600s and is renowned for its grandeur. The church's intricate design and ornate decorations are representative of the Spanish colonial architectural style.<br></li>
+                                
+                                    <li><strong>Capital of Pampanga:</strong><br> Bacolor served as the capital of Pampanga province during various periods of the Spanish colonial era. The town's strategic location made it an important center of governance and administration.<br>
+                                
+                                    <li><strong>Volcanic Eruptions:</strong><br> Bacolor's history is also marked by the destructive impact of natural disasters. The most significant of these was the eruption of Mount Pinatubo in 1991. The volcanic ash and lahar (mudflow) resulting from the eruption buried much of the town, including its historic structures. The lahar flow permanently altered the landscape and caused the abandonment of the old town center.<br></li>
+                                
+                                    <li><strong>Religious and Cultural Influence:</strong><br> As in many Spanish colonial towns, the Catholic Church played a central role in Bacolor's social and cultural life. Religious festivals and processions were an integral part of the community's identity. These traditions continue to be observed in modern times.<br></li>
+                                
+                                    <li><strong>Agriculture and Economy:</strong><br> Bacolor's economy during the Spanish era was primarily based on agriculture. The fertile plains surrounding the town were used for cultivating rice, sugar cane, and other crops. The Spanish colonial authorities introduced various agricultural techniques and crops to the region.<br></li>
+                                
+                                    <li><strong>Revolts and Resistance:</strong><br> Like other parts of the Philippines, Bacolor experienced local uprisings and resistance against Spanish rule. These revolts were often sparked by issues such as forced labor, excessive taxes, and abuse of power by Spanish authorities.<br></li>
+                                
+                                    <li><strong>American Colonial Period:</strong><br> The Spanish-American War in 1898 marked the end of Spanish colonial rule in the Philippines. Bacolor, like the rest of the country, transitioned to American colonial administration. This era brought about significant changes in governance, infrastructure, and education.<br></li>
+                                
+                                </ol>
+                                Overall, Bacolor's history during the Spanish colonial era is a complex tapestry of culture, architecture, religion, and socio-political dynamics. The remnants of this era can still be seen in the town's surviving structures and in the cultural heritage of its people.<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <img id="largeImage2" src="images/history/Spanish.jpg" alt="Large Image" class="w-full h-full object-cover">
+            </div>
+            <!-- Image Slider -->
+            <div class="h-1/4 p-2 flex justify-center items-center">
+                <div id="sliderContainer2" class="slider-container flex justify-center items-center overflow-x-auto">
+                    <div class="slider-item p-2" onclick="changeImage('image1.jpg')">
+                        <img src="images/history/Spanish.jpg" alt="Image 1" class="w-[30vw] max-h-[30vh] object-cover cursor-pointer">
+                    </div>
+                    <div class="slider-item p-2" onclick="changeImage('image2.jpg')">
+                        <img src="images/history/SP/19 century capito town bacolor.jpg" alt="Image 2" class="w-[30vw] max-h-[30vh] object-cover cursor-pointer">
+                    </div>
+                    <div class="slider-item p-2" onclick="changeImage('image3.jpg')">
+                        <img src="images/history/SP/Puig1 copy.jpg" alt="Image 3" class="w-[30vw] max-h-[30vh] object-cover cursor-pointer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        // JavaScript function to handle image selection and display
+        function setupImageGallery(largeImageId, sliderContainerId) {
+            document.addEventListener("DOMContentLoaded", function() {
+                const largeImage = document.getElementById(largeImageId);
+                const imageSliderItems = document.querySelectorAll(`#${sliderContainerId} .slider-item`);
+            
+                imageSliderItems.forEach(item => {
+                    item.addEventListener('click', () => {
+                        // Set the large image source to the selected image
+                        largeImage.src = item.querySelector('img').src;
+                    });
+                });
+            });
+        }
+    
+        // Example usage:
+        setupImageGallery('largeImage1', 'sliderContainer1');
+        setupImageGallery('largeImage2', 'sliderContainer2');
+    </script>
+    
+</body>
+</html>

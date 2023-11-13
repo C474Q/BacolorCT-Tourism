@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel:wght@400;500;600;700;800;900&family=DM+Serif+Text:ital@0;1&family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Judson:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <style>
+        .slider-container {
+            height: 100vh; /* Set the desired height for the slider */
+        }
+    </style>
+</head>
+<body >
+
+<div class="overflow-hidden hidden sm:block">
+    <div class="flex justify-center items-center w-screen h-screen space-x-2">
+        <div class="w-1/4 flex justify-center items-center">
+            <!-- Image Slider -->
+            <div id="sliderContainer1" class="slider-container flex flex-col justify-center items-center overflow-y-auto">
+                <div class="slider-item p-2" onclick="changeImage1('image1.jpg', 'Sisig',
+                'Sisig is a popular Filipino dish that originated in Pampanga. It typically consists of chopped and grilled pigs face and ears, seasoned with chili peppers, onions, and various spices. Sisig is often served on a sizzling plate and is a favorite among locals and tourists alike.')">
+                    <img src="images/FNF/sisig.jpg" alt="Image 1" class="w-full max-h-[22vh] rounded-full border-4 border-black object-cover cursor-pointer">
+                </div>
+                <div class="slider-item p-2" onclick="changeImage1('image2.jpg', 'Biringhe',
+                'Bringhe is a Filipino version of paella. Its a rice dish cooked with glutinous rice, chicken, chorizo (sausage), vegetables, coconut milk, and various spices. The result is a flavorful and aromatic dish that showcases the fusion of Spanish and Filipino culinary influences.')">
+                    <img src="images/FNF/biringhe.jpg" alt="Image 2" class="w-full max-h-[22vh] rounded-full border-4 border-black object-cover cursor-pointer">
+                </div>
+                <div class="slider-item p-2" onclick="changeImage1('image3.jpg', 'Tamales', 
+                'Bacolor is famous for its version of tamales, a dish made of rice flour, coconut milk, and various fillings such as chicken, pork, or shrimp. The mixture is wrapped in banana leaves and then steamed to perfection.')">
+                    <img src="images/FNF/tamales.jpg" alt="Image 3" class="w-full max-h-[22vh] rounded-full border-4 border-black object-cover cursor-pointer">
+                </div>
+                <div class="slider-item p-2" onclick="changeImage1('image4.jpg', 'Kakanin', 
+                'Kakanin refers to a variety of traditional Filipino rice cakes that are popular in Pampanga. These include bibingka (rice cake baked with coconut milk and sugar), sapin-sapin (layered rice cake with different colors and flavors), and suman (sticky rice cakes wrapped in leaves).')">
+                    <img src="images/FNF/kakanin.jpg" alt="Image 4" class="w-full max-h-[22vh] rounded-full border-4 border-black object-cover cursor-pointer">
+                </div>
+            </div>
+        </div>
+        <div class="w-3/4 h-screen p-2 relative flex flex-col justify-center items-center">
+            <div id="redContainer" class="bg-[#1b2021] bg-opacity-70 rounded-lg w-[40vw] h-[30vw] absolute right-0 p-4 flex items-center">
+                <div class="absolute right-0 text-[#f7f9f9] flex flex-col">
+                    <h1 id="redContainerTitle1" class="font-bold text-4xl ml-2 mt-4" style="font-family: 'Playfair Display SC', serif;">Sisig</h1>
+                    <p id="redContainerParagraph1" class="overflow-y-auto p-2 w-full h-[25vw]" style="font-family: 'PT Sans', sans-serif;">
+                        Sisig is a popular Filipino dish that originated in Pampanga. It typically consists of chopped and grilled pig's face and ears, seasoned with chili peppers, onions, and various spices. Sisig is often served on a sizzling plate and is a favorite among locals and tourists alike.
+                    </p>
+                </div>
+            </div>
+            <!-- Large Image Display -->
+            <div class="h-full p-4">
+                <img id="largeImage1" src="images/FNF/sisig.jpg" alt="Large Image" class="w-full h-full object-cover border-4 border-black rounded-lg">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="overflow-hidden block sm:hidden">
+    <div class="flex flex-col h-screen">
+        <!-- Large Image Display -->
+        <div class="h-3/4  p-2 relative flex justify-center items-center">
+            <div id="redContainer" class="bg-[#1b2021] bg-opacity-70 w-[70vw] h-[70vh] absolute right-0 mr-5 p-4 flex items-center">
+                <div class="absolute right-0 text-[#f7f9f9]">
+                    <h1 id="redContainerTitle2" class="font-bold text-2xl ml-2" style="font-family: 'Playfair Display SC', serif;">Sisig</h1>
+                    <p id="redContainerParagraph2" class="overflow-y-auto p-2 w-full h-[50vh]" style="font-family: 'PT Sans', sans-serif;">
+                        Sisig is a popular Filipino dish that originated in Pampanga. It typically consists of chopped and grilled pig's face and ears, seasoned with chili peppers, onions, and various spices. Sisig is often served on a sizzling plate and is a favorite among locals and tourists alike.
+                    </p>
+                </div>
+            </div>
+            <div class="h-full p-4">
+                <img id="largeImage2" src="images/FNF/sisig.jpg" alt="Large Image" class="w-full h-full object-cover border-4 border-black rounded-lg">
+            </div>
+        </div>
+        <!-- Image Slider -->
+        <div class="h-1/4 p-2 flex justify-center items-center">
+            <div id="sliderContainer2" class="slider-container flex justify-center items-center overflow-x-auto">
+                <div class="slider-item p-2" onclick="changeImage2('image1.jpg', 'Sisig',
+                 'Sisig is a popular Filipino dish that originated in Pampanga. It typically consists of chopped and grilled pigs face and ears, seasoned with chili peppers, onions, and various spices. Sisig is often served on a sizzling plate and is a favorite among locals and tourists alike.')">
+                    <img src="images/FNF/sisig.jpg" alt="Image 1" class="w-[20vw] max-h-[30vh] object-cover cursor-pointer">
+                </div>
+                <div class="slider-item p-2" onclick="changeImage2('image2.jpg', 'Biringhe',
+                 'Bringhe is a Filipino version of paella. Its a rice dish cooked with glutinous rice, chicken, chorizo (sausage), vegetables, coconut milk, and various spices. The result is a flavorful and aromatic dish that showcases the fusion of Spanish and Filipino culinary influences.')">
+                    <img src="images/FNF/biringhe.jpg" alt="Image 2" class="w-[20vw] max-h-[30vh] object-cover cursor-pointer">
+                </div>
+                <div class="slider-item p-2" onclick="changeImage2('image3.jpg', 'Tamales',
+                 'Bacolor is famous for its version of tamales, a dish made of rice flour, coconut milk, and various fillings such as chicken, pork, or shrimp. The mixture is wrapped in banana leaves and then steamed to perfection.')">
+                    <img src="images/FNF/tamales.jpg" alt="Image 3" class="w-[20vw] max-h-[30vh] object-cover cursor-pointer">
+                </div>
+                <div class="slider-item p-2" onclick="changeImage2('image4.jpg', 'Kakanin',
+                 'Kakanin refers to a variety of traditional Filipino rice cakes that are popular in Pampanga. These include bibingka (rice cake baked with coconut milk and sugar), sapin-sapin (layered rice cake with different colors and flavors), and suman (sticky rice cakes wrapped in leaves).)">
+                    <img src="images/FNF/kakanin.jpg" alt="Image 4" class="w-[20vw] max-h-[30vh] object-cover cursor-pointer">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+<script>
+    // JavaScript function to handle image selection and display
+    function setupImageGallery(largeImageId, sliderContainerId) {
+        document.addEventListener("DOMContentLoaded", function() {
+            const largeImage = document.getElementById(largeImageId);
+            const imageSliderItems = document.querySelectorAll(`#${sliderContainerId} .slider-item`);
+        
+            imageSliderItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    // Set the large image source to the selected image
+                    largeImage.src = item.querySelector('img').src;
+                });
+            });
+        });
+    }
+
+    // Example usage:
+    setupImageGallery('largeImage1', 'sliderContainer1');
+    setupImageGallery('largeImage2', 'sliderContainer2');
+    setupImageGallery('largeImageA', 'sliderContainerA');
+    setupImageGallery('largeImageB', 'sliderContainerB');
+</script>
+
+<script>
+    
+        // JavaScript function to handle image selection and display
+        function changeImage1(imageSrc, title, paragraph) {
+        const largeImage = document.getElementById('largeImage1');
+        const redContainerTitle = document.getElementById('redContainerTitle1');
+        const redContainerParagraph = document.getElementById('redContainerParagraph1');
+
+        // Set the large image source to the selected image
+        largeImage.src = imageSrc;
+
+        // Update the red container content
+        redContainerTitle.textContent = title;
+        redContainerParagraph.textContent = paragraph;
+    }
+</script>
+
+<script>
+    
+    // JavaScript function to handle image selection and display
+    function changeImage2(imageSrc, title, paragraph) {
+    const largeImage = document.getElementById('largeImage2');
+    const redContainerTitle = document.getElementById('redContainerTitle2');
+    const redContainerParagraph = document.getElementById('redContainerParagraph2');
+
+    // Set the large image source to the selected image
+    largeImage.src = imageSrc;
+
+    // Update the red container content
+    redContainerTitle.textContent = title;
+    redContainerParagraph.textContent = paragraph;
+}
+</script>
+
+</body>
+</html>

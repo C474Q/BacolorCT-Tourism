@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel:wght@400;500;600;700;800;900&family=DM+Serif+Text:ital@0;1&family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Judson:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <style>
+        .slider-container {
+            height: 100vh; /* Set the desired height for the slider */
+        }
+    </style>
+</head>
+<body>
+    <div class="overflow-hidden hidden sm:block">
+      <div class="flex justify-center items-center w-screen h-screen space-x-2">
+            <div class="w-1/4 flex justify-center items-center">
+                <!-- Image Slider -->
+                <div id="sliderContainer1" class="slider-container flex flex-col justify-center items-center overflow-y-auto">
+                    <div class="slider-item p-2" onclick="changeImage('image1.jpg')">
+                        <img src="images/history/WWII.jpg" alt="Image 1" class="w-full max-h-[30vh] object-cover cursor-pointer">
+                    </div>
+                    <div class="slider-item p-2" onclick="changeImage('image2.jpg')">
+                        <img src="images/history/WW/196.St.Marys copy.jpg" alt="Image 2" class="w-full max-h-[30vh] object-cover cursor-pointer">
+                    </div>
+                    <div class="slider-item p-2" onclick="changeImage('image3.jpg')">
+                        <img src="images/history/WW/download (1).jfif" alt="Image 3" class="w-full max-h-[30vh] object-cover cursor-pointer">
+                    </div>
+                </div>
+            </div>
+            <div class="w-3/4 h-screenp-2 relative flex flex-col justify-center items-center">
+                <div class="bg-[#a76d61] bg-opacity-70 rounded-lg w-[40vw] h-[30vw] absolute right-0 p-4 flex items-center">
+                    <div class="absolute right-0 text-[#f7f9f9] flex flex-col">
+                        <h1 class="font-bold text-4xl ml-2" style="font-family: 'Judson', serif;">Post World War II</h1>
+                        <div class="overflow-y-auto p-2 w-full h-[25vw]">
+                            <p class="overflow-y-auto" style="font-family: 'Gelasio', serif;">
+                                After World War II, Bacolor, a town in the province of Pampanga in the Philippines, experienced a significant period of rebuilding and growth, as did many other areas in the country. Here are some key points in Bacolor's history post-World War II:<br>
+                                <br>
+                                <ol>
+                                
+                                    <li><strong>Reconstruction and Rehabilitation</strong>:<br> Bacolor, like many towns and cities in the Philippines, suffered extensive damage during World War II. The process of reconstruction and rehabilitation was a challenging one, as the town had to rebuild its infrastructure, homes, and local economy from the ground up.<br></li>
+                                
+                                    <li><strong>Conversion of Lahar-Covered Areas</strong>:<br> One of the unique challenges that Bacolor faced was the presence of lahar, volcanic mudflows, resulting from the eruption of Mount Pinatubo in 1991. The eruption covered large portions of Bacolor and its surrounding areas with thick layers of volcanic debris. This forced the community to relocate and rebuild in safer locations.<br></li>
+                                
+                                    <li><strong>Relocation of the Town Center</strong>:<br> Due to the destruction caused by the lahar, Bacolor had to relocate its town center to a safer area. The original town center was buried under volcanic debris, so a new town center was established. This relocation also affected the town's historical and cultural landmarks.<br></li>
+                                
+                                    <li><strong>Cultural and Historical Preservation</strong>:<br> Despite the challenges posed by natural disasters and urban development, efforts were made to preserve Bacolor's cultural and historical heritage. Some structures that survived the war and subsequent challenges were restored and maintained, providing a connection to the town's past.<br></li>
+                                
+                                    <li><strong>Economic Revival</strong>:<br> Bacolor's economy gradually revived as its residents rebuilt their lives and businesses. Agriculture, including rice and sugarcane farming, has historically been a significant part of the town's economy. Additionally, the town's proximity to the city of San Fernando and other urban centers contributed to its economic activities.<br></li>
+                                
+                                    <li><strong>Community Resilience</strong>:<br> Bacolor's residents demonstrated resilience and a strong sense of community in the face of adversity. The challenges posed by natural disasters and other setbacks did not deter them from rebuilding their lives and maintaining their cultural traditions.<br></li>
+                                
+                                    <li><strong>Infrastructure Development</strong>:<br> In the decades following World War II, Bacolor, like many other towns, experienced improvements in infrastructure. This included the construction of roads, schools, healthcare facilities, and other public amenities to support the growing population.<br></li>
+                                
+                                    <li><strong>Modernization and Urbanization</strong>:<br> Over time, Bacolor underwent modernization and urbanization as part of broader trends in the Philippines. This led to changes in the town's landscape, with new structures and developments changing the character of the town.<br></li>
+                                
+                                </ol>
+                                            It's important to note that specific details and events may have occurred after my last knowledge update in September 2021. For the most current and detailed information about Bacolor's history post-World War II, I recommend consulting local historical records, official sources, and scholarly works on the subject.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Large Image Display -->
+                <div class="h-full p-2">
+                    <img id="largeImage1" src="images/history/WWII.jpg" alt="Large Image" class="w-full h-full object-cover">
+                </div>
+            </div>
+      </div>
+    </div>
+
+    <div class="overflow-hidden block sm:hidden">
+        <div class="flex flex-col h-screen">
+            <!-- Large Image Display -->
+            <div class="h-3/4 p-2 relative flex justify-center items-center">
+                <div class="bg-[#a76d61] bg-opacity-70 w-[70vw] h-[70vh] absolute right-0 mr-5 p-4 flex items-center">
+                    <div class="absolute right-0 text-[#f7f9f9]">
+                        <h1 class="font-bold text-2xl ml-2" style="font-family: 'Judson', serif;">Post World War II</h1>
+                        <div class="overflow-y-auto p-2 w-full h-[50vh]">
+                            <p class="overflow-y-auto" style="font-family: 'Gelasio', serif;">
+                                After World War II, Bacolor, a town in the province of Pampanga in the Philippines, experienced a significant period of rebuilding and growth, as did many other areas in the country. Here are some key points in Bacolor's history post-World War II:<br>
+                                <br>
+                                <ol>
+
+                                    <li><strong>Reconstruction and Rehabilitation</strong>:<br> Bacolor, like many towns and cities in the Philippines, suffered extensive damage during World War II. The process of reconstruction and rehabilitation was a challenging one, as the town had to rebuild its infrastructure, homes, and local economy from the ground up.<br></li>
+
+                                    <li><strong>Conversion of Lahar-Covered Areas</strong>:<br> One of the unique challenges that Bacolor faced was the presence of lahar, volcanic mudflows, resulting from the eruption of Mount Pinatubo in 1991. The eruption covered large portions of Bacolor and its surrounding areas with thick layers of volcanic debris. This forced the community to relocate and rebuild in safer locations.<br></li>
+
+                                    <li><strong>Relocation of the Town Center</strong>:<br> Due to the destruction caused by the lahar, Bacolor had to relocate its town center to a safer area. The original town center was buried under volcanic debris, so a new town center was established. This relocation also affected the town's historical and cultural landmarks.<br></li>
+
+                                    <li><strong>Cultural and Historical Preservation</strong>:<br> Despite the challenges posed by natural disasters and urban development, efforts were made to preserve Bacolor's cultural and historical heritage. Some structures that survived the war and subsequent challenges were restored and maintained, providing a connection to the town's past.<br></li>
+
+                                    <li><strong>Economic Revival</strong>:<br> Bacolor's economy gradually revived as its residents rebuilt their lives and businesses. Agriculture, including rice and sugarcane farming, has historically been a significant part of the town's economy. Additionally, the town's proximity to the city of San Fernando and other urban centers contributed to its economic activities.<br></li>
+
+                                    <li><strong>Community Resilience</strong>:<br> Bacolor's residents demonstrated resilience and a strong sense of community in the face of adversity. The challenges posed by natural disasters and other setbacks did not deter them from rebuilding their lives and maintaining their cultural traditions.<br></li>
+
+                                    <li><strong>Infrastructure Development</strong>:<br> In the decades following World War II, Bacolor, like many other towns, experienced improvements in infrastructure. This included the construction of roads, schools, healthcare facilities, and other public amenities to support the growing population.<br></li>
+
+                                    <li><strong>Modernization and Urbanization</strong>:<br> Over time, Bacolor underwent modernization and urbanization as part of broader trends in the Philippines. This led to changes in the town's landscape, with new structures and developments changing the character of the town.<br></li>
+
+                                </ol>
+                                            It's important to note that specific details and events may have occurred after my last knowledge update in September 2021. For the most current and detailed information about Bacolor's history post-World War II, I recommend consulting local historical records, official sources, and scholarly works on the subject.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <img id="largeImage2" src="images/history/WWII.jpg" alt="Large Image" class="w-full h-full object-cover">
+            </div>
+            <!-- Image Slider -->
+            <div class="h-1/4 p-2 flex justify-center items-center">
+                <div id="sliderContainer2" class="slider-container flex justify-center items-center overflow-x-auto">
+                    <div class="slider-item p-2" onclick="changeImage('image1.jpg')">
+                        <img src="images/history/WWII.jpg" alt="Image 1" class="w-[30vw] max-h-[30vh] object-cover cursor-pointer">
+                    </div>
+                    <div class="slider-item p-2" onclick="changeImage('image2.jpg')">
+                        <img src="images/history/WW/196.St.Marys copy.jpg" alt="Image 2" class="w-[30vw] max-h-[30vh] object-cover cursor-pointer">
+                    </div>
+                    <div class="slider-item p-2" onclick="changeImage('image3.jpg')">
+                        <img src="images/history/WW/download (1).jfif" alt="Image 3" class="w-[30vw] max-h-[30vh] object-cover cursor-pointer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        // JavaScript function to handle image selection and display
+        function setupImageGallery(largeImageId, sliderContainerId) {
+            document.addEventListener("DOMContentLoaded", function() {
+                const largeImage = document.getElementById(largeImageId);
+                const imageSliderItems = document.querySelectorAll(`#${sliderContainerId} .slider-item`);
+            
+                imageSliderItems.forEach(item => {
+                    item.addEventListener('click', () => {
+                        // Set the large image source to the selected image
+                        largeImage.src = item.querySelector('img').src;
+                    });
+                });
+            });
+        }
+    
+        // Example usage:
+        setupImageGallery('largeImage1', 'sliderContainer1');
+        setupImageGallery('largeImage2', 'sliderContainer2');
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel:wght@400;500;600;700;800;900&family=DM+Serif+Text:ital@0;1&family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Judson:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Pixelify+Sans:wght@400;500;600;700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=VT323&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <style>
+        .slider-container {
+            height: 100vh; /* Set the desired height for the slider */
+        }
+    </style>
+</head>
+<body>
+    <div class="overflow-hidden hidden sm:block">
+      <div class="flex justify-center items-center w-screen h-screen space-x-2">
+            <div class="w-1/4 flex justify-center items-center">
+                <!-- Image Slider -->
+                <div id="sliderContainer1" class="slider-container flex flex-col justify-center items-center overflow-y-auto">
+                    <div class="slider-item p-2" onclick="changeImage('image1.jpg')">
+                        <img src="images/Landmarks/SGPC/1-164.jpg" alt="Image 1" class="w-full max-h-[30vh] object-cover cursor-pointer">
+                    </div>
+                    <div class="slider-item p-2" onclick="changeImage('image2.jpg')">
+                        <img src="images/Landmarks/SGPC/San_Guillermo_church-1.jpg" alt="Image 2" class="w-full max-h-[30vh] object-cover cursor-pointer">
+                    </div>
+                    <div class="slider-item p-2" onclick="changeImage('image3.jpg')">
+                        <img src="images/Landmarks/SGPC/San_Guillermo_Parish_Church_-_Bacolor,_Pampanga,_Philippines.jpg" alt="Image 3" class="w-full max-h-[30vh] object-cover cursor-pointer">
+                    </div>
+                </div>
+            </div>
+            <div class="w-3/4 h-screen p-2 relative flex flex-col justify-center items-center">
+                <div class="bg-[#a76d61] bg-opacity-70 rounded-lg w-[40vw] h-[30vw] absolute right-0 p-4 flex items-center">
+                    <div class="absolute right-0 text-[#f7f9f9] flex flex-col">
+                        <h1 class="font-bold text-4xl ml-2" style="font-family: 'Pixelify Sans', sans-serif;">San Guillermo Parish Church</h1>
+                        <p class="overflow-y-auto p-2 w-full h-[20vw]" style="font-family: 'VT323', monospace;">
+                            San Guillermo Parish Church in Bacolor, Pampanga, Philippines, is dedicated to San Guillermo, the town's patron saint. Originally constructed in 1576 by the Augustinian Friars, the church's history is intertwined with the town's founding. Padre Diego de Ochoa, OSA, became its first parish priest two years later. After an earthquake in 1880, the church was demolished, but Fr. Eugenio Alvarez oversaw its reconstruction in 1886. Tragedy struck again in 1995 when a lahar flow from Mount Pinatubo, which had erupted in 1991, buried half of the church's 12-meter height. This disaster led to the evacuation of over 50,000 residents to safer areas. Adjacent to the church's façade, a museum offers insights into its history and features paintings depicting the 1991 Pinatubo eruption. The San Guillermo Parish Church stands as a testament to the enduring spirit of Bacolor's community, having weathered natural disasters and preserved its heritage throughout the centuries.
+                        </p>
+                    </div>
+                </div>
+                <!-- Large Image Display -->
+                <div class="h-full p-2">
+                    <img id="largeImage1" src="images/Landmarks/SGPC/1-164.jpg" alt="Large Image" class="w-full h-full object-cover">
+                </div>
+            </div>
+      </div>
+    </div>
+
+    <div class="overflow-hidden block sm:hidden">
+        <div class="flex flex-col h-screen">
+            <!-- Large Image Display -->
+            <div class="h-3/4 p-2 relative flex justify-center items-center">
+                <div class="bg-[#a76d61] bg-opacity-70 w-[70vw] h-[70vh] absolute right-0 mr-5 p-4 flex items-center">
+                    <div class="absolute right-0 text-[#f7f9f9]">
+                        <h1 class="font-bold text-2xl ml-2" style="font-family: 'Pixelify Sans', sans-serif;">San Guillermo Parish Church</h1>
+                        <p class="overflow-y-auto p-2 w-full h-[50vh]" style="font-family: 'VT323', monospace;">
+                            San Guillermo Parish Church in Bacolor, Pampanga, Philippines, is dedicated to San Guillermo, the town's patron saint. Originally constructed in 1576 by the Augustinian Friars, the church's history is intertwined with the town's founding. Padre Diego de Ochoa, OSA, became its first parish priest two years later. After an earthquake in 1880, the church was demolished, but Fr. Eugenio Alvarez oversaw its reconstruction in 1886. Tragedy struck again in 1995 when a lahar flow from Mount Pinatubo, which had erupted in 1991, buried half of the church's 12-meter height. This disaster led to the evacuation of over 50,000 residents to safer areas. Adjacent to the church's façade, a museum offers insights into its history and features paintings depicting the 1991 Pinatubo eruption. The San Guillermo Parish Church stands as a testament to the enduring spirit of Bacolor's community, having weathered natural disasters and preserved its heritage throughout the centuries.
+                        </p>
+                    </div>
+                </div>
+                <img id="largeImage2" src="images/Landmarks/SGPC/1-164.jpg" alt="Large Image" class="w-full h-full object-cover">
+            </div>
+            <!-- Image Slider -->
+            <div class="h-1/4 p-2 flex justify-center items-center">
+                <div id="sliderContainer2" class="slider-container flex justify-center items-center overflow-x-auto">
+                    <div class="slider-item p-2" onclick="changeImage('image1.jpg')">
+                        <img src="images/Landmarks/SGPC/1-164.jpg" alt="Image 1" class="w-[30vw] max-h-[30vh] object-cover cursor-pointer">
+                    </div>
+                    <div class="slider-item p-2" onclick="changeImage('image2.jpg')">
+                        <img src="images/Landmarks/SGPC/San_Guillermo_church-1.jpg" alt="Image 2" class="w-[30vw] max-h-[30vh] object-cover cursor-pointer">
+                    </div>
+                    <div class="slider-item p-2" onclick="changeImage('image3.jpg')">
+                        <img src="images/Landmarks/SGPC/San_Guillermo_Parish_Church_-_Bacolor,_Pampanga,_Philippines.jpg" alt="Image 3" class="w-[30vw] max-h-[30vh] object-cover cursor-pointer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        // JavaScript function to handle image selection and display
+        function setupImageGallery(largeImageId, sliderContainerId) {
+            document.addEventListener("DOMContentLoaded", function() {
+                const largeImage = document.getElementById(largeImageId);
+                const imageSliderItems = document.querySelectorAll(`#${sliderContainerId} .slider-item`);
+            
+                imageSliderItems.forEach(item => {
+                    item.addEventListener('click', () => {
+                        // Set the large image source to the selected image
+                        largeImage.src = item.querySelector('img').src;
+                    });
+                });
+            });
+        }
+    
+        // Example usage:
+        setupImageGallery('largeImage1', 'sliderContainer1');
+        setupImageGallery('largeImage2', 'sliderContainer2');
+    </script>
+    
+</body>
+</html>

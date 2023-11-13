@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel:wght@400;500;600;700;800;900&family=DM+Serif+Text:ital@0;1&family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Judson:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Pixelify+Sans:wght@400;500;600;700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=VT323&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/png">
+    <title>Landmarks | Bacolor City Tourism</title>
+    <style>
+        @keyframes bobble {
+            0%, 100% {
+                transform: translateY(0) scale(1.05);
+            }
+            50% {
+                transform: translateY(-20px) scale(1.05);
+            }
+        }
+
+        .bobble {
+            animation: bobble 0.5s infinite;
+            transform-origin: center; /* Optional: Set the transform origin to the center for better scaling effect */
+        }
+
+        .hover\:bobble-container:hover {
+            animation: bobble 0.5s infinite;
+        }
+
+        .sepia-70{
+            filter: sepia(70%);
+        }
+
+        .map-modal-bg {
+        background-image: url('images/Landmarks/map-paper.png');
+        }
+
+        .map-modal-bg-sm {
+        background-image: url('images/Landmarks/map-paper-sm.png');
+        }
+    </style>
+</head>
+<body>
+<!--Nav-->
+<div class="fixed inset-y-0 right-0 sm:w-[20vw] md:w-[12vw] lg:w-[10vw] h-[40vh] flex flex-col items-center justify-between z-50">
+    <!-- Logo -->
+    <div class="py-2">
+        <button title="Show Menu" id="scrollToTop" class="hover:scale-110 transform transition-transform duration-300 ease-in-out" onclick="toggleNavIcons()">
+            <img src="images/BacoLogo.png" alt="Logo" class="w-[20vw] sm:w-[17vw] md:w-[9vw] lg:w-[7vw] h-auto">
+        </button>
+    </div>
+    
+    <!-- Navigation Icons -->
+    <div class="flex flex-col p-2 rounded-2xl bg-opacity-40 bg-[#1b2021] w-[20vw] sm:w-[17vw] md:w-[9vw] lg:w-[7vw] justify-center items-center space-y-4 mt-2 h-full hidden">
+        <a href="index.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+            <i title="Home" class="fas fa-home text-xl"></i>
+        </a>
+        <a href="municipality.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+            <i title="Municipality" class="fas fa-landmark text-xl"></i>
+        </a>
+        <a href="history.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+            <i title="History" class="fas fa-hourglass-end text-xl"></i>
+        </a>
+        <a href="map.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+            <i title="Landmarks" class="fas fa-map-marker-alt text-xl"></i>
+        </a>
+        <a href="fnf.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+            <i title="Foods and Festivities" class="fas fa-utensils text-xl"></i>
+        </a>
+    </div>
+</div>
+
+<script>
+    // JavaScript function to toggle the navigation icons
+    function toggleNavIcons() {
+        var navIcons = document.querySelector('.flex.flex-col.justify-center.items-center.space-y-4');
+        navIcons.classList.toggle('hidden');
+    }
+</script>
+<!--Nav-->
+
+    <div class="overflow-hidden hidden sm:block">
+        <div id="movebg" class="w-screen h-screen bg-[#edd4b2] bg-prp flex flex-col items-center justify-center" style="background-image: url(images/Landmarks/map_bg.png);">
+
+            <div class="text-[#5f1700] absolute top-0 mt-4 lg:mt-0 flex flex-col justify-center items-center md:w-[75vw] lg:w-[50vw] xl:w-[50vw] h-[25vh]">
+                <p class="font-semibold text-2xl" style="font-family: 'VT323', monospace;">Landmarks of</p>
+                <h1 class="font-bold text-8xl mb-8" style="font-family: 'Pixelify Sans', sans-serif;">Bacolor</h1>
+            </div>
+
+            <div class="translate-y-10 md:w-[60vw] md:h-[60vw] lg:w-[50vw] lg:h-[50vw] xl:w-[40vw] xl:h-[40vw] relative bg-prp">
+
+                <div class="-z-40 bg-prp h-full w-full" style="background-image: url(images/Landmarks/map-bg.png); filter: sepia(70%);"></div>
+
+                <div title="San Guillermo Paris Church" id="openModalButton" 
+                class="cursor-pointer sepia-70 hover:sepia-0 hover:bobble-container absolute top-0 left-[30%] map-md-size bg-prp" style="background-image: url(images/Landmarks/map-church.png);"></div>
+                <div title="Monument to Simón de Anda y Salazar" id="openModalButton2" 
+                class="cursor-pointer sepia-70 hover:sepia-0 hover:bobble-container absolute bottom-0 left-[30%] map-md-size bg-prp" style="background-image: url(images/Landmarks/map-mark.png);"></div>
+
+                <div title="Juan Crisostomo Soto Statue" id="openModalButton3" 
+                class="cursor-pointer sepia-70 hover:sepia-0 hover:bobble-container absolute top-[30%] left-0 map-md-size bg-prp" style="background-image: url(images/Landmarks/map-stat.png);"></div>
+                <div title="The Sunken Shrine of Our Lady of Lourdes of Cabetican" id="openModalButton4" 
+                class="cursor-pointer sepia-70 hover:sepia-0 hover:bobble-container absolute top-[30%] right-0 map-md-size bg-prp" style="background-image: url(images/Landmarks/map-shrine.png);"></div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="overflow-hidden block sm:hidden">
+        <div id="movebg" class="w-screen h-screen bg-prp bg-[#edd4b2] flex flex-col items-center justify-center" style="background-image: url(images/Landmarks/map_bg.png);">
+            <div class="w-[80vw] h-[80vh] bg-prp relative">
+
+                <div class="-z-40 bg-prp h-full w-full sepia-70" style="background-image: url(images/Landmarks/map-mobile-bg.png);"></div>
+
+                <div title="San Guillermo Paris Church" id="openModalButtonM" 
+                class="hover:scale-110 sepia-70 hover:sepia-0 absolute top-0 left-[30%] w-[32vw] h-[32vh] bg-prp" style="background-image: url(images/Landmarks/map-mobile-church.png);"></div>
+                <div title="Monument to Simón de Anda y Salazar" id="openModalButton2M" 
+                class="hover:scale-110 sepia-70 hover:sepia-0 absolute bottom-0 left-[30%] w-[32vw] h-[32vh] bg-prp" style="background-image: url(images/Landmarks/map-mobile-mark.png);"></div>
+
+                <div title="Juan Crisostomo Soto Statue" id="openModalButton3M" 
+                class="hover:scale-110 sepia-70 hover:sepia-0 absolute top-[30%] left-0 w-[32vw] h-[32vh] bg-prp" style="background-image: url(images/Landmarks/map-mobile-stat.png);"></div>
+                <div title="The Sunken Shrine of Our Lady of Lourdes of Cabetican" id="openModalButton4M" 
+                class="hover:scale-110 sepia-70 hover:sepia-0 absolute top-[30%] right-0 w-[32vw] h-[32vh] bg-prp" style="background-image: url(images/Landmarks/map-mobile-shrine.png);"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal" class="hidden fixed z-50 inset-0 flex items-center justify-center overflow-auto">
+        <div class="modal-content flex flex-col items-center w-[85vw] h-[85vh] text-center relative border-[#99876c] xl:border-0 sm:border-x-4">
+            <!-- Close Button -->
+            <div class="h-[5%] w-[100%]">
+            <button id="closeModalButton" class="absolute right-0 mr-2 mt-4 sm:mr-4 sm:mt-8 p-2 rounded-xl  bg-[#a76d61] bg-opacity-60 text-[#984447] hover:scale-110 hover:text-[#5f1700] focus:outline-none focus:text-[#5f1700]">
+                <span class="sr-only">Close</span>
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            </div>
+
+            <div class="bg-prp w-full h-full absolute -z-40 block sm:hidden" style="background-image: url(images/Landmarks/map-paper-sm.png);"></div>
+            <div class="bg-prp w-full h-full absolute -z-40 hidden sm:block" style="background-image: url(images/Landmarks/map-paper.png);"></div>
+
+            <div class="w-[90%] h-[90%] bottom-0">
+            <iframe src="landmark-SGPC.html" class="w-full h-full"></iframe>
+            </div>
+
+            <div class="w-screen h-screen fixed top-0 bg-black bg-opacity-50 -z-50"></div>
+        </div>
+    </div>
+
+    <div id="myModal2" class="hidden fixed z-50 inset-0 flex items-center justify-center overflow-auto">
+        <div class="modal-content flex flex-col items-center w-[85vw] h-[85vh] text-center relative border-[#99876c] xl:border-0 sm:border-x-4">
+            <!-- Close Button -->
+            <div class=" h-[5%] w-[100%]">
+            <button id="closeModalButton2" class="absolute right-0 mr-2 mt-4 sm:mr-4 sm:mt-8 p-2 rounded-xl bg-[#a76d61] bg-opacity-60 text-[#984447] hover:scale-110 hover:text-[#5f1700] focus:outline-none focus:text-[#5f1700]">
+                <span class="sr-only">Close</span>
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            </div>
+
+            <div class="bg-prp w-full h-full absolute -z-40 block sm:hidden" style="background-image: url(images/Landmarks/map-paper-sm.png);"></div>
+            <div class="bg-prp w-full h-full absolute -z-40 hidden sm:block" style="background-image: url(images/Landmarks/map-paper.png);"></div>
+
+            <div class="w-[90%] h-[90%] bottom-0">
+            <iframe src="landmark-MRK.html" class="w-full h-full"></iframe>
+            </div>
+
+            <div class="w-screen h-screen fixed top-0 bg-black bg-opacity-50 -z-50"></div>
+        </div>
+    </div>
+
+    <div id="myModal3" class="hidden fixed z-50 inset-0 flex items-center justify-center overflow-auto">
+        <div class="modal-content flex flex-col items-center w-[85vw] h-[85vh] text-center relative border-[#99876c] xl:border-0 sm:border-x-4">
+            <!-- Close Button -->
+            <div class="h-[5%] w-[100%]">
+            <button id="closeModalButton3" class="absolute right-0 mr-2 mt-4 sm:mr-4 sm:mt-8 p-2 rounded-xl  bg-[#a76d61] bg-opacity-60 text-[#984447] hover:scale-110 hover:text-[#5f1700] focus:outline-none focus:text-[#5f1700]">
+                <span class="sr-only">Close</span>
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            </div>
+
+            <div class="bg-prp w-full h-full absolute -z-40 block sm:hidden" style="background-image: url(images/Landmarks/map-paper-sm.png);"></div>
+            <div class="bg-prp w-full h-full absolute -z-40 hidden sm:block" style="background-image: url(images/Landmarks/map-paper.png);"></div>
+
+            <div class="w-[90%] h-[90%] bottom-0">
+            <iframe src="landmark-SOTO.html" class="w-full h-full"></iframe>
+            </div>
+
+            <div class="w-screen h-screen fixed top-0 bg-black bg-opacity-50 -z-50"></div>
+        </div>
+    </div>
+
+    <div id="myModal4" class="hidden fixed z-50 inset-0 flex items-center justify-center overflow-auto">
+        <div class="modal-content flex flex-col items-center w-[85vw] h-[85vh] text-center relative border-[#99876c] xl:border-0 sm:border-x-4">
+            <!-- Close Button -->
+            <div class="h-[5%] w-[100%]">
+                <button id="closeModalButton4" class="absolute right-0 mr-2 mt-4 sm:mr-4 sm:mt-8 p-2 rounded-xl  bg-[#a76d61] bg-opacity-60 text-[#984447] hover:scale-110 hover:text-[#5f1700] focus:outline-none focus:text-[#5f1700]">
+                    <span class="sr-only">Close</span>
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="bg-prp w-full h-full absolute -z-40 block sm:hidden" style="background-image: url(images/Landmarks/map-paper-sm.png);"></div>
+            <div class="bg-prp w-full h-full absolute -z-40 hidden sm:block" style="background-image: url(images/Landmarks/map-paper.png);"></div>
+
+            <div class="w-[90%] h-[90%] bottom-0">
+                <iframe src="landmark-SHR.html" class="w-full h-full"></iframe>
+            </div>
+
+            <div class="w-screen h-screen fixed top-0 bg-black bg-opacity-50 -z-50"></div>
+        </div>
+    </div>
+
+    <script>
+        const openModalButton = document.getElementById("openModalButton");
+        const openModalButtonM = document.getElementById("openModalButtonM");
+        const closeModalButton = document.getElementById("closeModalButton");
+        const modal = document.getElementById("myModal");
+    
+        openModalButton.addEventListener("click", () => {
+            modal.classList.remove("hidden");
+        });
+
+        openModalButtonM.addEventListener("click", () => {
+            modal.classList.remove("hidden");
+        });
+    
+        closeModalButton.addEventListener("click", () => {
+            modal.classList.add("hidden");
+        });
+    
+        const openModalButton2 = document.getElementById("openModalButton2");
+        const openModalButton2M = document.getElementById("openModalButton2M");
+        const closeModalButton2 = document.getElementById("closeModalButton2");
+        const modal2 = document.getElementById("myModal2");
+    
+        openModalButton2.addEventListener("click", () => {
+            modal2.classList.remove("hidden");
+        });
+
+        openModalButton2M.addEventListener("click", () => {
+            modal2.classList.remove("hidden");
+        });
+    
+        closeModalButton2.addEventListener("click", () => {
+            modal2.classList.add("hidden");
+        });
+
+        // New button and modal
+        const openModalButton3 = document.getElementById("openModalButton3");
+        const openModalButton3M = document.getElementById("openModalButton3M");
+        const closeModalButton3 = document.getElementById("closeModalButton3");
+        const modal3 = document.getElementById("myModal3");
+    
+        openModalButton3.addEventListener("click", () => {
+            modal3.classList.remove("hidden");
+        });
+
+        openModalButton3M.addEventListener("click", () => {
+            modal3.classList.remove("hidden");
+        });
+    
+        closeModalButton3.addEventListener("click", () => {
+            modal3.classList.add("hidden");
+        });
+
+        // New button and modal
+        const openModalButton4 = document.getElementById("openModalButton4");
+        const openModalButton4M = document.getElementById("openModalButton4M");
+        const closeModalButton4 = document.getElementById("closeModalButton4");
+        const modal4 = document.getElementById("myModal4");
+    
+        openModalButton4.addEventListener("click", () => {
+            modal4.classList.remove("hidden");
+        });
+
+        openModalButton4M.addEventListener("click", () => {
+            modal4.classList.remove("hidden");
+        });
+    
+        closeModalButton4.addEventListener("click", () => {
+            modal4.classList.add("hidden");
+        });
+    </script>
+    
+    <script>
+        // Define a function to add the background movement effect to a container
+        function addBackgroundMovementEffect(containerId) {
+          const container = document.getElementById(containerId);
+          
+          if (container) {
+            container.addEventListener('mousemove', (event) => {
+              const mouseX = event.clientX;
+              const mouseY = event.clientY;
+              const containerRect = container.getBoundingClientRect();
+              
+              const moveX = (mouseX - containerRect.left - containerRect.width / 2) / containerRect.width * 10;
+              const moveY = (mouseY - containerRect.top - containerRect.height / 2) / containerRect.height * 10;
+              
+              container.style.backgroundPosition = `calc(50% + ${moveX}px) calc(50% + ${moveY}px)`;
+            });
+          }
+        }
+            
+        addBackgroundMovementEffect('movebg');
+        addBackgroundMovementEffect('movebg-m');
+      </script>
+    
+
+</body>
+</html>

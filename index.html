@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel:wght@400;500;600;700;800;900&family=DM+Serif+Text:ital@0;1&family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Judson:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Pixelify+Sans:wght@400;500;600;700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=VT323&display=swap" rel="stylesheet">    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/png">
+    <title>Home | Bacolor City Tourism</title>
+    <style>
+      @keyframes bobble {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(1vw); }
+            50% { transform: translateX(0); }
+            75% { transform: translateX(1vw); }
+            100% { transform: translateX(0); }
+        }
+
+        .bobble-button:hover {
+            animation: bobble 2s ease infinite;
+        }
+
+    </style>
+
+
+<body>
+<!--Nav-->
+<div class="fixed inset-y-0 right-0 sm:w-[20vw] md:w-[12vw] lg:w-[10vw] h-[40vh] flex flex-col items-center justify-between z-50">
+  <!-- Logo -->
+  <div class="py-2">
+      <button title="Show Menu" id="scrollToTop" class="hover:scale-110 transform transition-transform duration-300 ease-in-out" onclick="toggleNavIcons()">
+          <img src="images/BacoLogo.png" alt="Logo" class="w-[20vw] sm:w-[17vw] md:w-[9vw] lg:w-[7vw] h-auto">
+      </button>
+  </div>
+  
+  <!-- Navigation Icons -->
+  <div class="flex flex-col p-2 rounded-2xl bg-opacity-40 bg-[#1b2021] w-[20vw] sm:w-[17vw] md:w-[9vw] lg:w-[7vw] justify-center items-center space-y-4 mt-2 h-full hidden">
+      <a href="index.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+          <i title="Home" class="fas fa-home text-xl"></i>
+      </a>
+      <a href="municipality.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+          <i title="Municipality" class="fas fa-landmark text-xl"></i>
+      </a>
+      <a href="history.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+          <i title="History" class="fas fa-hourglass-end text-xl"></i>
+      </a>
+      <a href="map.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+          <i title="Landmarks" class="fas fa-map-marker-alt text-xl"></i>
+      </a>
+      <a href="fnf.html" class="text-[#F7F9F9] hover:text-[#8de4ff] hover:scale-150 flex items-center justify-center transform transition-transform duration-300 ease-in-out">
+          <i title="Foods and Festivities" class="fas fa-utensils text-xl"></i>
+      </a>
+  </div>
+</div>
+
+<script>
+  // JavaScript function to toggle the navigation icons
+  function toggleNavIcons() {
+      var navIcons = document.querySelector('.flex.flex-col.justify-center.items-center.space-y-4');
+      navIcons.classList.toggle('hidden');
+  }
+</script>
+<!--Nav-->
+      
+<!--Small-->
+<div class="block sm:hidden">
+<div class="snap-y snap-mandatory overflow-y-scroll overflow-x-hidden h-screen scroll-snap-type-y-proximity">
+
+        <div class="snap-center w-full h-screen bg-[#232c33] scroll-snap-align-start transition-transform ease-in-out duration-500 bg-cover bg-center bg-no-repeat" style="background-image: url(images/sky.png);">
+          <div class="flex flex-col items-center justify-center w-full h-full bg-cover bg-center bg-no-repeat" style="background-image: url(images/home-hdr/m-home-hdr-layer.gif);">
+            <p class="text-white font-semibold text-lg" style="font-family: 'Cinzel', serif;">No further beyond</p>
+            <h1 class="text-white font-bold text-6xl" style="font-family: 'Abril Fatface', serif;">Bacolor</h1>
+            <div class="p-2 bg-[#283044] bg-opacity-70 rounded-lg w-[90vw] h-[50vh] flex flex-col items-center justify-center z-10">
+              <div class="w-full h-3/4 overflow-y-auto text-center mb-4" style="font-family: 'PT Sans', sans-serif;">
+                <p class="font-semibold text-white text-sm">Bacolor City in Pampanga, Philippines, seamlessly combines historical significance with modern charm, exemplifying resilience and a rich cultural heritage. The San Guillermo Parish Church, marked by Spanish colonial architecture altered by Mount Pinatubo's eruption, stands as a symbol of the city's strength. The city's vibrant present, expressed through colorful markets, Kapampangan culinary celebrations, and a tight-knit community forged in the face of natural disasters, beautifully intertwines with its historical roots, creating a captivating tapestry of history and vitality.</p>
+              </div>
+              <a  href="municipality.html">
+                <button class="hover:scale-110 bottom-0 bg-[#78a1bb] text-white px-4 py-2 rounded bobble-button" style="font-family: 'PT Sans', sans-serif;">Explore More</button>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="relative overflow-hidden flex flex-col items-center justify-center snap-center w-full h-screen bg-blue-300 scroll-snap-align-start transition-transform ease-in-out duration-500 bg-cover bg-center bg-no-repeat" style="background-image: url(images/history-bg.png);">
+          <div class="relative flex flex-col items-center justify-center w-screen h-3/4 bg-prp" style="background-image: url(images/history/hist-bg-mb.png);">
+            <h1 class="text-[#f7f9f9] font-bold text-6xl p-2 bg-[#5f1700] bg-opacity-30" style="font-family: 'Merriweather', serif;">History</h1>
+            <div class="p-4 w-[70vw] h-[50vh] relative bg-[#5f1700] bg-opacity-70 rounded-lg flex flex-col items-center justify-center">
+              <div class="w-full h-3/4 mb-4 rounded-lg overflow-y-auto">
+                <p class="text-white text-sm" style="font-family: 'Cinzel', serif;">Bacolor, Philippines, holds a rich history dating back to Spanish colonial times, highlighted by the partially buried San Guillermo Parish Church due to Mount Pinatubo's eruption. Despite natural calamities, the city showcases resilience through its well-preserved landmarks, creating a unique blend of historical significance and modern vibrancy.</p>
+              </div>
+              <a href="history.html">
+                <button class="hover:scale-110 mb-4 bottom-0 bg-[#984447] text-white px-4 py-2 rounded bobble-button" style="font-family: 'Cinzel', serif;">Visit the Past</button>
+              </a>
+            </div>
+          </div>
+
+          <div class="h-1/4 relative">
+            <div class="h-[100%] w-full flex flex-col items-center justify-center">
+              <!-- Overlapping containers with random rotations -->
+              <div class="absolute bottom-[15vh] left-0 w-[200px] h-[100px] bg-blue-500 z-20 -rotate-2 bg-prp border-y-2 border-black" style="background-image: url('images/pol-1.png');"></div>
+              <div class="absolute bottom-[2vh] left-0 w-[200px] h-[100px] bg-green-500 z-20 -rotate-3 bg-prp border-y-2 border-black" style="background-image: url('images/pol-2.png');"></div>
+              <div class="absolute bottom-0  w-[200px] h-[100px] bg-red-500 z-20 rotate-2 bg-prp border-y-2 border-black" style="background-image: url('images/pol-3.png');"></div>
+              <div class="absolute bottom-[12vh] right-0 w-[200px] h-[100px] bg-orange-500 rotate-6 bg-prp border-y-2 border-black" style="background-image: url('images/pol-4.png');"></div>
+              <div class="absolute bottom-0 right-0 w-[200px] h-[100px] bg-yellow-500 rotate-2 bg-prp border-y-2 border-black" style="background-image: url('images/pol-5.png');"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="snap-center w-full h-screen scroll-snap-align-start transition-transform ease-in-out duration-500">
+          <div class="h-screen w-screen bg-[#78a1bb] border-y-[2vh] border-[#d0a98f] flex relative bg-prp" style="background-image: url(images/fnf-bg.png);">
+            <!-- Left Side -->
+            <div class="flex-1 p-6 flex items-center relative">
+              <!-- Circular Container 1 -->
+              <div class="absolute z-10 top-0 left-[70%] transform -translate-x-1/2">
+                <div class="w-[40vh] h-[40vh] bg-blue-500 rounded-full border-[#1b2021] border-4 bg-prp" style="background-image:url(images/FNF/tamales.jpg);"></div>
+              </div>
+              <!-- Circular Container 2 -->
+              <div class="absolute z-10 top-[42%] left-[50%] transform -translate-x-1/2">
+                <div class="w-[15vh] h-[15vh] bg-green-500 rounded-full border-[#1b2021] border-4 bg-prp" style="background-image:url(images/FNF/kakanin.jpg);"></div>
+              </div>
+
+              <div class="absolute z-10 bottom-[5%] left-0 transform -translate-x-1/2">
+                <div class="w-[35vh] h-[35vh] bg-red-500 rounded-full border-[#1b2021] border-4 bg-prp" style="background-image:url(images/FNF/sisig.jpg);"></div>
+              </div>
+            </div>
+          
+            <!-- Right Side -->
+            <div class="flex-1 p-6 flex flex-col items-center justify-center z-10">
+              <h1 class="text-4xl md:text-6xl font-bold text-gray-800" style="font-family: 'DM Serif Text', serif;">Foods and Festivities</h1>
+              <p class="text-white text-sm bg-[#283044] bg-opacity-70 p-4 rounded-lg overflow-y-auto w-[75vw] h-[50vh]" style="font-family: 'Cinzel', serif;">Bacolor entices the senses with its vibrant culinary scene, celebrating the bold and flavorful Kapampangan dishes in lively markets and culinary festivals. Amidst colorful festivities, residents warmly share their stories, creating a dynamic tapestry of local flavors and community spirit that defines Bacolor's gastronomic and cultural experience.</p>
+              <a href="fnf.html">
+                <button class="px-4 py-2 mt-4 bg-[#78a1bb] text-white rounded-md hover:bg-blue-600 focus:outline-none bobble-button" style="font-family: 'Cinzel', serif;">Experience the Flavors and Fun</button>
+              </a>
+            </div>
+
+            <div class="bottom-0 h-[40vh] w-screen bg-[#283044] absolute -z-0"></div>
+          </div>
+        </div>
+        
+        
+        <div class="snap-center w-full h-screen bg-[#E0D0C1] scroll-snap-align-start transition-transform ease-in-out duration-500">
+          <div class="min-h-screen w-screen relative bg-cover bg-center bg-no-repeat" id="movebg-m" style="background-image: url('images/Landmarks/map_bg.png');">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-center text-white p-6">
+                <h2 class="text-5xl font-bold mb-4" style="font-family: 'Pixelify Sans', sans-serif;">Landmarks</h2>
+                <p class="text-white text-sm mb-4" style="font-family: 'VT323', monospace;">Bacolor City in the Philippines is adorned with historical landmarks, such as the San Guillermo Parish Church, showcasing resilient Spanish colonial architecture partially buried by Mount Pinatubo's eruption. The city's landscape is a captivating blend of well-preserved ancestral houses and centuries-old churches, each telling a story of Bacolor's rich heritage and enduring spirit.</p>
+                <a href="map.html">
+                  <button style="font-family: 'VT323', monospace;" class="bg-[#a76d61] hover:bg-[#d0a98f] text-white px-4 py-2 bobble-button transition-transform transform hover:scale-105">See the Sceneries</button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <footer class="w-screen bg-gray-800 text-white py-6">
+            <div class="container mx-auto">
+              <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+                <!-- First Quadrant (Logo) -->
+                <div class="lg:col-span-1 text-center flex flex-col justify-center items-center">
+                  <img src="images/BacoLogo.png" alt="Logo" class="h-64 mx-auto">
+                </div>
+                
+                <!-- Second Quadrant (Title and Links) -->
+                <div class="lg:col-span-1">
+                  <h4 class="text-xl font-bold">Find Us</h4>
+                  <p class="text-lg mt-2">
+                    Municipal Hall Building, Bacolor, Pampanga
+                  </p>
+                </div>
+                
+                <!-- Third Quadrant (Title and Links) -->
+                <div class="lg:col-span-1">
+                  <h4 class="text-xl font-semibold">ABOUT GOVPH</h4>
+                  <p class="text-md mt-2">Learn more about the Philippine government, its structure, how government works and the people behind it.</p>
+                  <ul class="mt-2">
+                    <li class="text-sm"><a href="http://www.gov.ph">GOV.PH</a></li>
+                    <li class="text-sm"><a href="https://www.gov.ph/data">Open Data Portal</a></li>
+                    <li class="text-sm"><a href="https://www.officialgazette.gov.ph">Official Gazette</a></li>
+                  </ul>
+                </div>
+                
+                <!-- Fourth Quadrant (Title and Links) -->
+                <div class="lg:col-span-1">
+                  <h4 class="text-lg font-semibold">About Us</h4>
+                  <ul class="mt-2">
+                    <li><a href="about-us.html">Meet the Devs</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+</div>
+</div>
+<!--Small-->
+
+<!--Large-->
+<div class="hidden sm:block w-full overflow-x-hidden">
+<div class="snap-y snap-mandatory overflow-y-scroll h-screen scroll-snap-type-y-proximity">
+  <div class="relative overflow-x-hidden snap-center w-full h-screen bg-[#232c33] scroll-snap-align-start transition-transform ease-in-out duration-500" style="background-image: url(images/sky.png); background-position: center; background-size: cover;">
+    <div style="background-image: url(images/home-hdr/home-hdr-layer-stars.gif); background-repeat: no-repeat; background-position: center; background-size: cover; background-position: center;">
+        <div id="parallax2" class="border-[#232323] border-y-[10vh] w-screen h-screen flex items-end justify-center bg-cover bg-center bg-no-repeat" style="background-image: url(images/home-hdr/home-hdr-layer-bg.png);">
+
+          <div class="flex flex-col relative items-center">
+            <div id="parallax1" class="flex flex-col justify-center items-center  h-screen w-screen absolute bottom-0 z-20 bg-cover bg-center bg-no-repeat" style="background-image: url(images/home-hdr/home-hdr-layer-church.gif); background-size: cover;">
+              <div class="p-4 rounded-xl absolute flex flex-col justify-start items-center md:mb-[20vh] md:w-[60vw] md:h-[30vw] lg:mb-[15vh] lg:w-[50vw] lg:h-[25vw] xl:mb-[12vh] xl:w-[40vw] xl:h-[20vw] bg-[#283044] bg-opacity-70 bottom-0">
+                <div class="w-full h-3/4 overflow-y-auto text-center" style="font-family: 'PT Sans', sans-serif;">
+                  <p class="font-semibold text-white">Bacolor City in Pampanga, Philippines, seamlessly combines historical significance with modern charm, exemplifying resilience and a rich cultural heritage. The San Guillermo Parish Church, marked by Spanish colonial architecture altered by Mount Pinatubo's eruption, stands as a symbol of the city's strength. The city's vibrant present, expressed through colorful markets, Kapampangan culinary celebrations, and a tight-knit community forged in the face of natural disasters, beautifully intertwines with its historical roots, creating a captivating tapestry of history and vitality.</p>
+                </div>
+                <a class="absolute bottom-0" href="municipality.html" style="font-family: 'PT Sans', sans-serif;">
+                  <button class=" hover:scale-110 mb-4 bg-[#78a1bb] text-white px-4 py-2 rounded bobble-button" style="font-family: 'PT Sans', sans-serif;">
+                    Explore More
+                  </button>
+                </a>
+              </div>
+              <div class="bg-cover bg-center bg-no-repeat w-screen h-screen flex flex-col justify-center items-center" style="background-image: url(images/home-hdr/home-hdr-layer-fg.png);">
+                    <div class="h-[25vh] w-[768px] relative flex flex-col justify-center items-center mb-[30vh]">
+                        <p class="text-[#F7F9F9] text-2xl" style="font-family: 'Cinzel', serif;">No Further Beyond</p>
+                        <h1 class="text-9xl text-[#F7F9F9] font-bold pl-10 mb-12" style="font-family: 'Abril Fatface', serif;">Bacolor</h1>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden lg:block absolute bottom-0 right-0 p-4 md:w-[15vw] md:h-[30vw] lg:w-[10.5vw] lg:h-[21vw] xl:w-[7.5vw] xl:h-[15vw] z-40" style="background-image: url(images/scroll.png); background-size: cover; background-position: center;"></div>
+        <div class="block lg:hidden absolute bottom-0 right-0 p-4 md:w-[15vw] md:h-[30vw] lg:w-[10.5vw] lg:h-[21vw] xl:w-[7.5vw] xl:h-[15vw] z-40" style="background-image: url(images/scroll-md.png); background-size: cover; background-position: center;"></div>
+    </div>
+
+    <script>
+      function addParallaxEffect(containerId) {
+      const container = document.getElementById(containerId);
+
+      if (container) {
+        container.addEventListener('mousemove', (event) => {
+          const mouseX = event.clientX;
+          const containerRect = container.getBoundingClientRect();
+          
+          const moveX = (mouseX - containerRect.left - containerRect.width / 2) / containerRect.width * 20;
+          
+          container.style.backgroundPosition = `calc(50% + ${moveX}px) 50%`; // Only move along the X-axis
+        });
+      }
+      }
+
+    addParallaxEffect('parallax1');
+    </script>
+
+    <script>
+      function addParallaxEffect(containerId) {
+      const container = document.getElementById(containerId);
+
+      if (container) {
+        container.addEventListener('mousemove', (event) => {
+          const mouseX = event.clientX;
+          const containerRect = container.getBoundingClientRect();
+          
+          const moveX = (mouseX - containerRect.left - containerRect.width / 2) / containerRect.width * 10;
+          
+          container.style.backgroundPosition = `calc(50% + ${moveX}px) 50%`; // Only move along the X-axis
+        });
+      }
+      }
+
+
+      addParallaxEffect('parallax2');
+    </script>
+  </div>
+
+  <div class="overflow-x-hidden snap-center w-full h-screen bg-lime-300 scroll-snap-align-start transition-transform ease-in-out duration-500">
+    <div class="h-screen w-screen bg-[#f8f4e3] flex bg-cover bg-center bg-no-repeat border-black border-[2vh] " style="background-image: url(images/history-bg.png);">
+      <!-- Left-side content -->
+      <div class="w-1/2 p-8 flex flex-col justify-center items-start bg-prp" style="background-image: url(images/history/hist-bg.png);">
+        <div class="bg-[#5f1700] bg-opacity-70 h-4/5 w-3/4 p-4 flex flex-col justify-center items-start rounded-xl">
+        <h2 class="text-6xl text-white font-bold mb-4" style="font-family: 'Merriweather', serif;">History</h2>
+        <p class="text-white overflow-y-auto pl-4 mb-4" style="font-family: 'Cinzel', serif;">Bacolor, a city in Pampanga, Philippines, boasts a storied history dating back to the Spanish colonial era. Its significance is deeply rooted in the San Guillermo Parish Church, a striking example of Spanish architecture partially buried by the cataclysmic eruption of Mount Pinatubo in 1991. Despite facing natural calamities, Bacolor has emerged resilient, with its well-preserved ancestral houses and centuries-old churches bearing witness to a community that steadfastly rebuilds, fostering a unique blend of historical richness and modern vibrancy.</p>
+        <a href="history.html">
+          <button class="bg-[#984447] text-white px-4 py-2 rounded bobble-button" sstyle="font-family: 'Cinzel', serif;">Visit the Past
+
+          </button>
+        </a>
+        </div>
+      </div>
+    
+      <!-- Right-side content -->
+      <div class="w-1/2 relative">
+        <div class="h-[100%] w-[1/3] flex flex-col items-center justify-center">
+          <!-- Overlapping containers with random rotations -->
+          <div class="sm:w-[300px] h-1/3 hover:scale-110 hover:z-40 hover:rotate-0 hover:right-0 transform transition-transform duration-300 ease-in-out rotate-6 bg-blue-500 absolute right-0 z-20 bg-prp border-y-2 border-black" style="background-image: url('images/pol-1.png'); bottom: 60%;"></div>
+          <div class="sm:w-[300px] h-1/3 hover:scale-110 hover:z-40 hover:rotate-0 hover:right-0 transform transition-transform duration-300 ease-in-out -rotate-3 bg-green-500 absolute right-0 z-20 bg-prp border-y-2 border-black" style="background-image: url('images/pol-2.png'); top: 30%;"></div>
+          <div class="sm:w-[300px] h-1/3 hover:scale-110 hover:z-40 hover:rotate-0 hover:right-0 transform transition-transform duration-300 ease-in-out rotate-4 bg-red-500 absolute right-0 z-10 bg-prp border-y-2 border-black" style="background-image: url('images/pol-3.png'); top: 60%;"></div>
+          <div class="sm:w-[300px] h-1/3 hover:scale-110 hover:z-40 hover:rotate-0 hover:right-0 transform transition-transform duration-300 ease-in-out rotate-[15deg] bg-orange-500 absolute right-0 bg-prp border-y-2 border-black" style="background-image: url('images/pol-4.png'); top: 45%; right: 35%;"></div>
+          <div class="sm:w-[300px] h-1/3 hover:scale-110 hover:z-40 hover:rotate-0 hover:right-0 transform transition-transform duration-300 ease-in-out -rotate-6 bg-yellow-500 absolute right-0 bg-prp border-y-2 border-black" style="background-image: url('images/pol-5.png'); bottom: 45%; right: 30%;"></div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div class="overflow-x-hidden snap-center w-full h-screen scroll-snap-align-start transition-transform ease-in-out duration-500">
+    <div class="h-screen w-screen bg-[#78a1bb] border-y-[5vh] border-[#d0a98f] flex relative bg-prp" style="background-image: url(images/fnf-bg.png);">
+      <!-- Left Side -->
+      <div class="flex-1 p-6 flex items-center relative z-10">
+          <!-- Circular Container 1 -->
+          <div class="absolute left-[3%] top-[3%]">
+            <div class="hover:scale-110 transform transition-transform duration-300 ease-in-out w-[45vh] h-[45vh] border-[#1b2021] border-4 bg-prp bg-blue-500 rounded-full" style="background-image:url(images/FNF/sisig.jpg);"></div>
+          </div>
+          <!-- Circular Container 2 -->
+          <div class="absolute left-[1%] top-[47%]">
+            <div class="hover:scale-110 transform transition-transform duration-300 ease-in-out w-[25vh] h-[25vh] border-[#1b2021] border-4 bg-prp bg-green-500 rounded-full" style="background-image:url(images/FNF/kakanin.jpg);"></div>
+          </div>
+          <!-- Circular Container 3 -->
+          <div class="absolute xl:left-[25%] lg:left-[35%] md:left-[45%] top-[45%]">
+            <div class="hover:scale-110 transform transition-transform duration-300 ease-in-out w-[50vh] h-[50vh] border-[#1b2021] border-4 bg-prp bg-red-500 rounded-full" style="background-image:url(images/FNF/tamales.jpg);"></div>
+          </div>
+      </div>
+    
+      <!-- Right Side -->
+      <div class="flex-1 p-6 flex flex-col items-center justify-center z-10">
+        <h1 class="text-6xl font-bold text-gray-800" style="font-family: 'DM Serif Text', serif;">Foods and Festivities</h1>
+        <p class="text-white bg-[#283044] bg-opacity-70 p-4 rounded-lg overflow-y-auto" style="font-family: 'Cinzel', serif;">Bacolor entices the senses with its vibrant culinary scene, celebrating the bold and flavorful Kapampangan dishes in lively markets and culinary festivals. Amidst colorful festivities, residents warmly share their stories, creating a dynamic tapestry of local flavors and community spirit that defines Bacolor's gastronomic and cultural experience.</p>
+        <a href="fnf.html">
+          <button class="px-4 py-2 mt-4 bg-[#78a1bb] text-white rounded-md hover:bg-blue-600 focus:outline-none bobble-button" style="font-family: 'Cinzel', serif;">Experience the Flavors and Fun</button>
+        </a>
+      </div>
+
+      <div class="bottom-0 h-[40vh] w-screen bg-[#283044] absolute -z-0"></div>
+    </div>
+  </div>
+
+  <div class="overflow-x-hidden snap-center w-full h-screen bg-[#E0D0C1] scroll-snap-align-start transition-transform ease-in-out duration-500">
+    <div class="min-h-screen w-screen relative" id="movebg" style="background-image: url('images/Landmarks/map_bg.png'); background-size: cover;">
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="text-center text-white p-6">
+          <h2 class="text-8xl font-bold mb-4" style="font-family: 'Pixelify Sans', sans-serif;">Landmarks</h2>
+          <p class="text-white w-[50vw] text-lg mb-4" style="font-family: 'VT323', monospace;">Bacolor City in the Philippines is adorned with historical landmarks, such as the San Guillermo Parish Church, showcasing resilient Spanish colonial architecture partially buried by Mount Pinatubo's eruption. The city's landscape is a captivating blend of well-preserved ancestral houses and centuries-old churches, each telling a story of Bacolor's rich heritage and enduring spirit.</p>
+          <a href="map.html">
+            <button style="font-family: 'VT323', monospace;" class="bg-[#a76d61] hover:bg-[#d0a98f] text-white px-4 py-2 bobble-button transition-transform transform hover:scale-105">See the Sceneries</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      // Define a function to add the background movement effect to a container
+      function addBackgroundMovementEffect(containerId) {
+        const container = document.getElementById(containerId);
+        
+        if (container) {
+          container.addEventListener('mousemove', (event) => {
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+            const containerRect = container.getBoundingClientRect();
+            
+            const moveX = (mouseX - containerRect.left - containerRect.width / 2) / containerRect.width * 10;
+            const moveY = (mouseY - containerRect.top - containerRect.height / 2) / containerRect.height * 10;
+            
+            container.style.backgroundPosition = `calc(50% + ${moveX}px) calc(50% + ${moveY}px)`;
+          });
+        }
+      }
+          
+      addBackgroundMovementEffect('movebg');
+      addBackgroundMovementEffect('movebg-m');
+    </script>
+
+    <footer class="w-screen bg-gray-800 text-white py-6">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+          <!-- First Quadrant (Logo) -->
+          <div class="lg:col-span-1 text-center flex flex-col justify-center items-center">
+            <img src="images/BacoLogo.png" alt="Logo" class="h-64 mx-auto">
+          </div>
+          
+          <!-- Second Quadrant (Title and Links) -->
+          <div class="lg:col-span-1">
+            <h4 class="text-xl font-bold">Find Us</h4>
+            <p class="text-lg mt-2">
+              Municipal Hall Building, Bacolor, Pampanga
+            </p>
+          </div>
+          
+          <!-- Third Quadrant (Title and Links) -->
+          <div class="lg:col-span-1">
+            <h4 class="text-xl font-semibold">ABOUT GOVPH</h4>
+            <p class="text-md mt-2">Learn more about the Philippine government, its structure, how government works and the people behind it.</p>
+            <ul class="mt-2">
+              <li class="text-sm"><a href="http://www.gov.ph">GOV.PH</a></li>
+              <li class="text-sm"><a href="https://www.gov.ph/data">Open Data Portal</a></li>
+              <li class="text-sm"><a href="https://www.officialgazette.gov.ph">Official Gazette</a></li>
+            </ul>
+          </div>
+          
+          <!-- Fourth Quadrant (Title and Links) -->
+          <div class="lg:col-span-1">
+            <h4 class="text-lg font-semibold">About Us</h4>
+            <ul class="mt-2">
+              <li><a href="about-us.html">Meet the Devs</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+    
+</div>
+
+</div>
+<!--Large-->
+
+
+</body>
+</html>

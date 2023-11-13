@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel:wght@400;500;600;700;800;900&family=DM+Serif+Text:ital@0;1&family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Judson:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <button id="openModalButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Open Modal
+    </button>
+
+    <div id="myModal" class="hidden fixed z-10 inset-0 flex items-center justify-center overflow-auto">
+        <div class="modal-content w-[95vw] h-[95vh] bg-green-300 p-4 rounded shadow-lg text-center relative">
+            <!-- Close Button -->
+            <button id="closeModalButton" class="absolute right-0 mr-2 text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500">
+                <span class="sr-only">Close</span>
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <iframe src="landmark_template.html" class="w-full h-full"></iframe>
+        </div>
+    </div>
+
+    <button id="openModalButton2" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+        Open Modal 2
+    </button>
+    
+    <div id="myModal2" class="hidden fixed z-10 inset-0 flex items-center justify-center overflow-auto">
+        <div class="modal-content bg-white p-4 rounded shadow-lg text-center">
+            <!-- Close Button -->
+            <button id="closeModalButton2" class="text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500">
+                <span class="sr-only">Close</span>
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+<script>
+    const openModalButton = document.getElementById("openModalButton");
+    const closeModalButton = document.getElementById("closeModalButton");
+    const modal = document.getElementById("myModal");
+
+    openModalButton.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+    });
+
+    closeModalButton.addEventListener("click", () => {
+        modal.classList.add("hidden");
+    });
+
+    // New button and modal
+    const openModalButton2 = document.getElementById("openModalButton2");
+    const closeModalButton2 = document.getElementById("closeModalButton2");
+    const modal2 = document.getElementById("myModal2");
+
+    openModalButton2.addEventListener("click", () => {
+        modal2.classList.remove("hidden");
+    });
+
+    closeModalButton2.addEventListener("click", () => {
+        modal2.classList.add("hidden");
+    });
+</script>
+
+    
+</body>
