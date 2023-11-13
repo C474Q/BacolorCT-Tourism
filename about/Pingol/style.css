@@ -1,0 +1,106 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'poppins', sans-serif;
+}
+.container {
+	width: 100%;
+	height: 100vh;
+	background-image: url("bg.jpg");
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.profile-box {
+	width: 100%;
+	width: 800px;
+    border: 1px solid #ccc;
+    padding: 20px;
+	background: #421A13;
+	text-align: center;
+	padding: 40px 90px;
+	color:#fff;
+	position: relative;
+	border-radius: 20px;
+	text-align: center;
+	justify-content: center;
+	
+}
+
+.search {
+	width:50px;
+	position: absolute;
+	left: 40px;
+	top: 40px;
+}
+
+.settings {
+	width: 50px;
+	position: absolute;
+	right: 40px;
+	top: 40px;
+}
+
+.me {
+	width: 150px;
+	border-radius: 50%;
+	background: #fff;
+	padding: 6px;
+	margin-top: 40px;
+}
+
+.profilebottom {
+	background: #fff;
+	color: #999;
+	padding: 60px 0; 
+	margin-right: -90px;
+	margin-left: -90px;
+	margin-bottom: -40px;
+	border-radius: 20px;
+	margin-top: -10px;
+	hyphens: auto;
+}
+
+.profilebottom img {
+	width: 15px;
+	margin-top: 15px;
+	cursor: pointer;
+
+}
+
+.profile-box button {
+	background: #fff;
+	color: #B0C4DE;
+	border: none;
+	outline: none;
+	box-shadow: 0 5px 10px rgba(156, 188, 220, 0.8);
+	padding: 15px 60px;
+	cursor: pointer;
+	border-radius: 30px;
+	margin-bottom: -50px;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.profile-box h3 {
+	font-size: 22px;
+	margin-top: 20px;
+	font-weight: 500;
+}
+
+.logo {
+	
+	margin: 5px 5px;
+	cursor: pointer;
+	
+	}
+
+.profilebottom p {
+	
+	line-height: 1.75;
+}
+

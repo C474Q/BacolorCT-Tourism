@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Kyle About Me Webpage</title>
+  <style>
+body {
+  background-color: rgb(50, 31, 104);
+  background: radial-gradient(circle, #30cfd0 0%, #330867 100%);
+}
+
+
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family:'Times New Roman', sans-serif;
+  text-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+
+.card {
+  width: 195px;
+  height: 285px;
+  background: none;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(254, 251, 255);
+  transition: 0.7s ease-out;
+   margin: 250px;
+   margin-top: 90px;
+   margin-right: 250px; 
+}
+
+.img {
+  position: absolute;
+  transition: 0.8s ease-out;
+  z-index: 1;
+}
+
+.card:hover > .textBox {
+  opacity: 1;
+}
+
+.card:hover > .img {
+  height: 65%;
+  filter: blur(7px);
+  animation: anim 5s infinite;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateY(0);
+  }
+
+  70% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.card:hover {
+  transform: scale(1.04) rotate(-1deg);
+}
+
+
+
+div.kekw {
+  background: radial-gradient(circle, #891ca5 0%, #7203fa 100%);
+  background-color: #4300af;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  padding: 20px;
+  margin: 20px;
+  width: 700px;
+  height: 500px;
+}
+
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+img {
+  height: 285px;
+  width: 195px;
+  border-radius: 25px;
+  
+}
+
+
+
+img.hehe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+
+}
+
+
+h1.iw {
+  margin-top: 300px;
+}
+
+
+.flex-container {
+  display: flex;
+  padding: 100px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+.hawo {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(-45deg, #a74efa 0%, #0841fc 100% );
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.hawo svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.hawo:hover {
+  transform: rotate(-5deg) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hawo__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.hawo:hover .hawo__content {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+
+.hawo__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.hawo__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.hawo:hover svg {
+  scale: 0;
+  transform: rotate(-45deg);
+}
+
+
+button {
+ --glow-color: rgb(217, 176, 255);
+ --glow-spread-color: rgba(191, 123, 255, 0.781);
+ --enhanced-glow-color: rgb(231, 206, 255);
+ --btn-color: rgb(100, 61, 136);
+ border: .25em solid var(--glow-color);
+ padding: 1em 3em;
+ color: var(--glow-color);
+ font-size: 15px;
+ font-weight: bold;
+ background-color: var(--btn-color);
+ border-radius: 1em;
+ outline: none;
+ box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+ text-shadow: 0 0 .5em var(--glow-color);
+ position: relative;
+ transition: all 0.3s;
+}
+
+button::after {
+ pointer-events: none;
+ content: "";
+ position: absolute;
+ top: 120%;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ background-color: var(--glow-spread-color);
+ filter: blur(2em);
+ opacity: .7;
+ transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+button:hover {
+ color: var(--btn-color);
+ background-color: var(--glow-color);
+ box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
+
+button:active {
+ box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+ margin: 50px;
+
+}
+
+.cool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: #a179ff; 
+    background: linear-gradient(#bd77ff 0%, #5178fa 100%);
+    border: 1px solid #111111; 
+    border-radius: 120px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.5s ease-in-out; 
+}
+
+.cool:hover {
+    transform: (1, -0.3, 0, 1, 0, 0); 
+}
+
+
+.solid {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    transition: box-shadow 0.5s ease-in-out; 
+}
+
+.solid:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); 
+}
+
+
+.what-if p {
+    margin: 10px 0;
+    color: #000000; 
+    font-weight: bold; 
+}
+
+  </style>
+</head>
+<body>
+
+  <h1>KYLE'S ABOUT ME WEBPAGE</h1>
+
+  <div class="center">
+    <div class="kekw">
+      <div class="card">
+        <img src="kyle.jpg" alt="Me">
+        <h1 class="hi">Kyle Tuazon<h1>
+
+</div>
+<div class="button-container">
+  <a href="https://www.facebook.com/kyle.tuazon.7">
+    <button class="btn">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+<path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UC5iPcb22uuEBMKrIwhHkYgA">
+  <button class="btn">
+<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+<path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/>
+</svg>
+<a href="https://www.tiktok.com/@itsunknownkyle">
+  <button class="btn">
+      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+<path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
+</svg>
+<a href="https://www.instagram.com/kyleangelo._/">
+  <button class="btn">
+      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+<path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+</svg>
+    <a href="https://twitter.com/ItsUnknownKyle">
+      <button class="btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+              <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>
+            </svg>
+          </svg>
+      </button>
+  </a>
+  </div>
+</div>
+</div>
+ 
+<h1 class="iw">CONTRIBUTION TO THE GROUP PROJECT</h1>
+<div class="flex-container">
+<div class="hawo">
+  <img class="history" src="History.jpg" alt="history">
+  <div class="hawo__content">
+    <p class="hawo__title">History Page
+    </p><p class="hawo__description"><i>My contribution so far in the website itself is making the History page itself the contents of it, images, and code is what I have done for the website itself.</i></p>
+  </div>
+</div>
+<div class="hawo">
+  <img class="ideas" src="ideas.png" alt="ideas">
+  <div class="hawo__content">
+    <p class="hawo__title">Ideas 
+    </p><p class="hawo__description"><i>This is also one of my contributions is by giving ideas to what on adding to the website itself like some aspects to it and some contents as well.</i></p>
+  </div>
+</div>
+
+<div class="hawo">
+  <img class="new" src="new ideas.png" alt="new">
+  <div class="hawo__content">
+    <p class="hawo__title">New Ideas
+    </p><p class="hawo__description"><i>Since our project is still being developed there are some ideas that I can give and suggest to our main project as its still in progress like ideas to the design and contents of it.</i></p>
+  </div>
+</div>
+</div>
+
+<h1>ABOUT ME AND MY HOBBIES</h1>
+<div class="center">
+<div class="cool">
+  <img class="Hobby" src="Hobby.png" alt="hobby">
+  <div class="what-if">
+      <p>About Me: Hi I'm Kyle Angelo Tuazon  I'm 20 years old and I am a third year Computer Engineering student at Holy Angel University. I reside in Dau Mabalacat City Pampanga and I was born in the City of Angeles. 
+      I'm also a twitch moderator for 50+ streamers in Twitch and I do it on a daily basis its fun for me because I can interact with new people in the community.
+      <br> 
+      My moto in life is " If you're tired of starting over stop giving up "</p>
+      <p>Playing Games: Playing sports and games have been my hobby growing up and it really helps me being able to socialize with other people in general I do this activity on a daily basis when I have free time.</p>
+      <p>Listening To Music: Listening to music and making playlists is a kind of therapy for me because it makes me feel better in a way listening to my favorite songs makes me relaxed and all the stress will be not bother me for a while.</p>
+      <p>Watching Films: Watching Tv series, Anime, Movies, Kdramas, sporting events and other types of films is one of the most comforting thing I do on my free time to just relax for a bit with the family or friends its like a bonding experience with them also you can really learn something from watching films.</p>
+      <p>The Hobbies that were mentioned here are mostly my favorite activities because there are times that we need to take a deep breath and relax from time to time don't pressure yourself too much these hobbies can really help you feel a lot better and you can actually learn something from those hobbies.</p>
+  
+    </div>
+</div>
+</div>
+</body>
+</html>
